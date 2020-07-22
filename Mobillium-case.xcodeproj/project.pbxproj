@@ -1,0 +1,1018 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374C24C7310E001665FA /* AppDelegate.swift */; };
+		C2C8374F24C7310E001665FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374E24C7310E001665FA /* SceneDelegate.swift */; };
+		C2C8375124C7310E001665FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8375024C7310E001665FA /* ViewController.swift */; };
+		C2C8375624C7310F001665FA /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C8375524C7310F001665FA /* App.xcassets */; };
+		C2C8375924C7310F001665FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C8375724C7310F001665FA /* LaunchScreen.storyboard */; };
+		C2C8376424C7310F001665FA /* Mobillium_caseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8376324C7310F001665FA /* Mobillium_caseTests.swift */; };
+		C2C8376F24C7310F001665FA /* Mobillium_caseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8376E24C7310F001665FA /* Mobillium_caseUITests.swift */; };
+		C2C8378D24C7344A001665FA /* MCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8378C24C7344A001665FA /* MCBuilder.swift */; };
+		C2C8378F24C73459001665FA /* MCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8378E24C73459001665FA /* MCPresenter.swift */; };
+		C2C8379124C73461001665FA /* MCWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379024C73461001665FA /* MCWorker.swift */; };
+		C2C8379324C7346C001665FA /* MCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379224C7346C001665FA /* MCRouter.swift */; };
+		C2C8379524C73472001665FA /* MCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379424C73472001665FA /* MCModel.swift */; };
+		C2C8379724C7347B001665FA /* MCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379624C7347B001665FA /* MCView.swift */; };
+		C2C8379924C73483001665FA /* MCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379824C73483001665FA /* MCViewController.swift */; };
+		C2C8379B24C7348B001665FA /* MCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379A24C7348B001665FA /* MCInteractor.swift */; };
+		C2C837B724C7367A001665FA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837AF24C7367A001665FA /* LoginPresenter.swift */; };
+		C2C837B824C7367A001665FA /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B024C7367A001665FA /* LoginWorker.swift */; };
+		C2C837B924C7367A001665FA /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B124C7367A001665FA /* LoginRouter.swift */; };
+		C2C837BA24C7367A001665FA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B224C7367A001665FA /* LoginModels.swift */; };
+		C2C837BB24C7367A001665FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B324C7367A001665FA /* LoginViewController.swift */; };
+		C2C837BC24C7367A001665FA /* LoginBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B424C7367A001665FA /* LoginBuilder.swift */; };
+		C2C837BD24C7367A001665FA /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B524C7367A001665FA /* LoginInteractor.swift */; };
+		C2C837BE24C7367A001665FA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B624C7367A001665FA /* LoginView.swift */; };
+		C2C837C124C736C0001665FA /* Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837C024C736C0001665FA /* Then.swift */; };
+		C2C837C324C73F06001665FA /* LeftImageFormTextFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837C224C73F06001665FA /* LeftImageFormTextFieldItem.swift */; };
+		C2C837D924C73F83001665FA /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837C724C73F83001665FA /* Globals.swift */; };
+		C2C837DA24C73F83001665FA /* UILab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837C824C73F83001665FA /* UILab.swift */; };
+		C2C837DB24C73F83001665FA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837CA24C73F83001665FA /* Logger.swift */; };
+		C2C837DC24C73F83001665FA /* LoggerTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837CB24C73F83001665FA /* LoggerTypes.swift */; };
+		C2C837DD24C73F83001665FA /* LoggerArrayCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837CC24C73F83001665FA /* LoggerArrayCompatible.swift */; };
+		C2C837DE24C73F83001665FA /* ConstraintTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837CE24C73F83001665FA /* ConstraintTypes.swift */; };
+		C2C837DF24C73F83001665FA /* ConstraintTypealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837CF24C73F83001665FA /* ConstraintTypealias.swift */; };
+		C2C837E024C73F83001665FA /* ConstraintGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D024C73F83001665FA /* ConstraintGet.swift */; };
+		C2C837E124C73F83001665FA /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D124C73F83001665FA /* ConstraintAttributes.swift */; };
+		C2C837E224C73F83001665FA /* ConstraintLogAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D224C73F83001665FA /* ConstraintLogAdapter.swift */; };
+		C2C837E324C73F83001665FA /* ConstraintSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D324C73F83001665FA /* ConstraintSet.swift */; };
+		C2C837E424C73F83001665FA /* ConstraintActivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D424C73F83001665FA /* ConstraintActivate.swift */; };
+		C2C837E524C73F83001665FA /* ConstraintSuper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D524C73F83001665FA /* ConstraintSuper.swift */; };
+		C2C837E624C73F83001665FA /* ConstraintArrayCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D624C73F83001665FA /* ConstraintArrayCompatible.swift */; };
+		C2C837E724C73F83001665FA /* ConstraintVerboseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D724C73F83001665FA /* ConstraintVerboseName.swift */; };
+		C2C837E824C73F83001665FA /* ConstraintAssociatedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D824C73F83001665FA /* ConstraintAssociatedKeys.swift */; };
+		C2C837EB24C742CB001665FA /* MCLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837EA24C742CB001665FA /* MCLabel.swift */; };
+		C2C837EE24C7431A001665FA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837ED24C7431A001665FA /* String.swift */; };
+		C2C837F024C74569001665FA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837EF24C74569001665FA /* FormView.swift */; };
+		C2C837F324C74652001665FA /* FormTextFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F224C74652001665FA /* FormTextFieldItem.swift */; };
+		C2C837F624C74837001665FA /* ActionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F524C74837001665FA /* ActionFormView.swift */; };
+		C2C837F824C74873001665FA /* MCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F724C74873001665FA /* MCButton.swift */; };
+		C2C837FA24C748D4001665FA /* OvalActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F924C748D4001665FA /* OvalActionButton.swift */; };
+		C2C837FC24C74C7B001665FA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C837FB24C74C7B001665FA /* Colors.xcassets */; };
+		C2C8380224C74D26001665FA /* MCGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8380124C74D26001665FA /* MCGradientLayer.swift */; };
+		C2C8384024C761DF001665FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C8383F24C761DF001665FA /* Images.xcassets */; };
+		C2C8384224C76521001665FA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C8384124C76521001665FA /* Icons.xcassets */; };
+		C2C8384424C775CB001665FA /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8384324C775CB001665FA /* UILabel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2C8376024C7310F001665FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2C8374124C7310E001665FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2C8374824C7310E001665FA;
+			remoteInfo = "Mobillium-case";
+		};
+		C2C8376B24C7310F001665FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2C8374124C7310E001665FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2C8374824C7310E001665FA;
+			remoteInfo = "Mobillium-case";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2C8374924C7310E001665FA /* Mobillium-case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobillium-case.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C8374C24C7310E001665FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2C8374E24C7310E001665FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C2C8375024C7310E001665FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2C8375524C7310F001665FA /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
+		C2C8375824C7310F001665FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2C8375A24C7310F001665FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C8375F24C7310F001665FA /* Mobillium-caseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobillium-caseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C8376324C7310F001665FA /* Mobillium_caseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobillium_caseTests.swift; sourceTree = "<group>"; };
+		C2C8376524C7310F001665FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C8376A24C7310F001665FA /* Mobillium-caseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mobillium-caseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C8376E24C7310F001665FA /* Mobillium_caseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobillium_caseUITests.swift; sourceTree = "<group>"; };
+		C2C8377024C7310F001665FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2C8378C24C7344A001665FA /* MCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBuilder.swift; sourceTree = "<group>"; };
+		C2C8378E24C73459001665FA /* MCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCPresenter.swift; sourceTree = "<group>"; };
+		C2C8379024C73461001665FA /* MCWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCWorker.swift; sourceTree = "<group>"; };
+		C2C8379224C7346C001665FA /* MCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCRouter.swift; sourceTree = "<group>"; };
+		C2C8379424C73472001665FA /* MCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCModel.swift; sourceTree = "<group>"; };
+		C2C8379624C7347B001665FA /* MCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCView.swift; sourceTree = "<group>"; };
+		C2C8379824C73483001665FA /* MCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCViewController.swift; sourceTree = "<group>"; };
+		C2C8379A24C7348B001665FA /* MCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCInteractor.swift; sourceTree = "<group>"; };
+		C2C837AF24C7367A001665FA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		C2C837B024C7367A001665FA /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		C2C837B124C7367A001665FA /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		C2C837B224C7367A001665FA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		C2C837B324C7367A001665FA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2C837B424C7367A001665FA /* LoginBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBuilder.swift; sourceTree = "<group>"; };
+		C2C837B524C7367A001665FA /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		C2C837B624C7367A001665FA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C2C837C024C736C0001665FA /* Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
+		C2C837C224C73F06001665FA /* LeftImageFormTextFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftImageFormTextFieldItem.swift; sourceTree = "<group>"; };
+		C2C837C724C73F83001665FA /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		C2C837C824C73F83001665FA /* UILab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILab.swift; sourceTree = "<group>"; };
+		C2C837CA24C73F83001665FA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		C2C837CB24C73F83001665FA /* LoggerTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTypes.swift; sourceTree = "<group>"; };
+		C2C837CC24C73F83001665FA /* LoggerArrayCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerArrayCompatible.swift; sourceTree = "<group>"; };
+		C2C837CE24C73F83001665FA /* ConstraintTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTypes.swift; sourceTree = "<group>"; };
+		C2C837CF24C73F83001665FA /* ConstraintTypealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTypealias.swift; sourceTree = "<group>"; };
+		C2C837D024C73F83001665FA /* ConstraintGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintGet.swift; sourceTree = "<group>"; };
+		C2C837D124C73F83001665FA /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
+		C2C837D224C73F83001665FA /* ConstraintLogAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLogAdapter.swift; sourceTree = "<group>"; };
+		C2C837D324C73F83001665FA /* ConstraintSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintSet.swift; sourceTree = "<group>"; };
+		C2C837D424C73F83001665FA /* ConstraintActivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintActivate.swift; sourceTree = "<group>"; };
+		C2C837D524C73F83001665FA /* ConstraintSuper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintSuper.swift; sourceTree = "<group>"; };
+		C2C837D624C73F83001665FA /* ConstraintArrayCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintArrayCompatible.swift; sourceTree = "<group>"; };
+		C2C837D724C73F83001665FA /* ConstraintVerboseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintVerboseName.swift; sourceTree = "<group>"; };
+		C2C837D824C73F83001665FA /* ConstraintAssociatedKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAssociatedKeys.swift; sourceTree = "<group>"; };
+		C2C837EA24C742CB001665FA /* MCLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCLabel.swift; sourceTree = "<group>"; };
+		C2C837ED24C7431A001665FA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C2C837EF24C74569001665FA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		C2C837F224C74652001665FA /* FormTextFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldItem.swift; sourceTree = "<group>"; };
+		C2C837F524C74837001665FA /* ActionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionFormView.swift; sourceTree = "<group>"; };
+		C2C837F724C74873001665FA /* MCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCButton.swift; sourceTree = "<group>"; };
+		C2C837F924C748D4001665FA /* OvalActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalActionButton.swift; sourceTree = "<group>"; };
+		C2C837FB24C74C7B001665FA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C2C8380124C74D26001665FA /* MCGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCGradientLayer.swift; sourceTree = "<group>"; };
+		C2C8383F24C761DF001665FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C2C8384124C76521001665FA /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		C2C8384324C775CB001665FA /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2C8374624C7310E001665FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2C8375C24C7310F001665FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2C8376724C7310F001665FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2C8374024C7310E001665FA = {
+			isa = PBXGroup;
+			children = (
+				C2C8374B24C7310E001665FA /* Mobillium-case */,
+				C2C8376224C7310F001665FA /* Mobillium-caseTests */,
+				C2C8376D24C7310F001665FA /* Mobillium-caseUITests */,
+				C2C8374A24C7310E001665FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2C8374A24C7310E001665FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8374924C7310E001665FA /* Mobillium-case.app */,
+				C2C8375F24C7310F001665FA /* Mobillium-caseTests.xctest */,
+				C2C8376A24C7310F001665FA /* Mobillium-caseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2C8374B24C7310E001665FA /* Mobillium-case */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8378124C73154001665FA /* Core */,
+				C2C8378024C7314F001665FA /* Scenes */,
+				C2C8377F24C7314B001665FA /* Modules */,
+				C2C8377E24C7313B001665FA /* Reusable */,
+				C2C8378924C7331E001665FA /* Utility */,
+				C2C8377C24C7311A001665FA /* App */,
+				C2C8377D24C7312C001665FA /* Supporting files */,
+				C2C8375024C7310E001665FA /* ViewController.swift */,
+			);
+			path = "Mobillium-case";
+			sourceTree = "<group>";
+		};
+		C2C8376224C7310F001665FA /* Mobillium-caseTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8376324C7310F001665FA /* Mobillium_caseTests.swift */,
+				C2C8376524C7310F001665FA /* Info.plist */,
+			);
+			path = "Mobillium-caseTests";
+			sourceTree = "<group>";
+		};
+		C2C8376D24C7310F001665FA /* Mobillium-caseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8376E24C7310F001665FA /* Mobillium_caseUITests.swift */,
+				C2C8377024C7310F001665FA /* Info.plist */,
+			);
+			path = "Mobillium-caseUITests";
+			sourceTree = "<group>";
+		};
+		C2C8377C24C7311A001665FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8374C24C7310E001665FA /* AppDelegate.swift */,
+				C2C8374E24C7310E001665FA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C2C8377D24C7312C001665FA /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8378624C73190001665FA /* Assets */,
+				C2C8375724C7310F001665FA /* LaunchScreen.storyboard */,
+				C2C8375A24C7310F001665FA /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		C2C8377E24C7313B001665FA /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837E924C742C1001665FA /* Core */,
+				C2C8378524C7316E001665FA /* Label */,
+				C2C8378424C7316A001665FA /* TextField */,
+				C2C8378324C73166001665FA /* Button */,
+				C2C8378224C7315F001665FA /* View */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		C2C8377F24C7314B001665FA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C2C8378024C7314F001665FA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8379C24C73573001665FA /* Auth */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C2C8378124C73154001665FA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8378B24C73432001665FA /* Scene */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C2C8378224C7315F001665FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837F424C747FD001665FA /* Form */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2C8378324C73166001665FA /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837F924C748D4001665FA /* OvalActionButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		C2C8378424C7316A001665FA /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		C2C8378524C7316E001665FA /* Label */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		C2C8378624C73190001665FA /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8375524C7310F001665FA /* App.xcassets */,
+				C2C837FB24C74C7B001665FA /* Colors.xcassets */,
+				C2C8383F24C761DF001665FA /* Images.xcassets */,
+				C2C8384124C76521001665FA /* Icons.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C2C8378924C7331E001665FA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837C424C73F1F001665FA /* Modules */,
+				C2C8378A24C73322001665FA /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C2C8378A24C73322001665FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837EC24C74313001665FA /* Core */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2C8378B24C73432001665FA /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8378C24C7344A001665FA /* MCBuilder.swift */,
+				C2C8378E24C73459001665FA /* MCPresenter.swift */,
+				C2C8379024C73461001665FA /* MCWorker.swift */,
+				C2C8379224C7346C001665FA /* MCRouter.swift */,
+				C2C8379424C73472001665FA /* MCModel.swift */,
+				C2C8379624C7347B001665FA /* MCView.swift */,
+				C2C8379824C73483001665FA /* MCViewController.swift */,
+				C2C8379A24C7348B001665FA /* MCInteractor.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		C2C8379C24C73573001665FA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8379E24C7357E001665FA /* Login */,
+				C2C8379D24C73579001665FA /* Register */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C2C8379D24C73579001665FA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C2C8379E24C7357E001665FA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837AF24C7367A001665FA /* LoginPresenter.swift */,
+				C2C837B024C7367A001665FA /* LoginWorker.swift */,
+				C2C837B124C7367A001665FA /* LoginRouter.swift */,
+				C2C837B224C7367A001665FA /* LoginModels.swift */,
+				C2C837B324C7367A001665FA /* LoginViewController.swift */,
+				C2C837B424C7367A001665FA /* LoginBuilder.swift */,
+				C2C837B524C7367A001665FA /* LoginInteractor.swift */,
+				C2C837B624C7367A001665FA /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C2C837BF24C736AE001665FA /* Then */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837C024C736C0001665FA /* Then.swift */,
+			);
+			path = Then;
+			sourceTree = "<group>";
+		};
+		C2C837C424C73F1F001665FA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837C524C73F26001665FA /* UILab */,
+				C2C837BF24C736AE001665FA /* Then */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C2C837C524C73F26001665FA /* UILab */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837CD24C73F83001665FA /* Constraints */,
+				C2C837C624C73F83001665FA /* Core */,
+				C2C837C924C73F83001665FA /* Logger */,
+			);
+			path = UILab;
+			sourceTree = "<group>";
+		};
+		C2C837C624C73F83001665FA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837C724C73F83001665FA /* Globals.swift */,
+				C2C837C824C73F83001665FA /* UILab.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C2C837C924C73F83001665FA /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837CA24C73F83001665FA /* Logger.swift */,
+				C2C837CB24C73F83001665FA /* LoggerTypes.swift */,
+				C2C837CC24C73F83001665FA /* LoggerArrayCompatible.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		C2C837CD24C73F83001665FA /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837CE24C73F83001665FA /* ConstraintTypes.swift */,
+				C2C837CF24C73F83001665FA /* ConstraintTypealias.swift */,
+				C2C837D024C73F83001665FA /* ConstraintGet.swift */,
+				C2C837D124C73F83001665FA /* ConstraintAttributes.swift */,
+				C2C837D224C73F83001665FA /* ConstraintLogAdapter.swift */,
+				C2C837D324C73F83001665FA /* ConstraintSet.swift */,
+				C2C837D424C73F83001665FA /* ConstraintActivate.swift */,
+				C2C837D524C73F83001665FA /* ConstraintSuper.swift */,
+				C2C837D624C73F83001665FA /* ConstraintArrayCompatible.swift */,
+				C2C837D724C73F83001665FA /* ConstraintVerboseName.swift */,
+				C2C837D824C73F83001665FA /* ConstraintAssociatedKeys.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		C2C837E924C742C1001665FA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8380024C74D1D001665FA /* Layer */,
+				C2C837FF24C74D13001665FA /* Button */,
+				C2C837FE24C74D0E001665FA /* Label */,
+				C2C837FD24C74D0A001665FA /* View */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C2C837EC24C74313001665FA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837ED24C7431A001665FA /* String.swift */,
+				C2C8384324C775CB001665FA /* UILabel.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C2C837F124C74647001665FA /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837EF24C74569001665FA /* FormView.swift */,
+				C2C837F224C74652001665FA /* FormTextFieldItem.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		C2C837F424C747FD001665FA /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837F524C74837001665FA /* ActionFormView.swift */,
+				C2C837C224C73F06001665FA /* LeftImageFormTextFieldItem.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		C2C837FD24C74D0A001665FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837F124C74647001665FA /* Form */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2C837FE24C74D0E001665FA /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837EA24C742CB001665FA /* MCLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		C2C837FF24C74D13001665FA /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837F724C74873001665FA /* MCButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		C2C8380024C74D1D001665FA /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				C2C8380124C74D26001665FA /* MCGradientLayer.swift */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2C8374824C7310E001665FA /* Mobillium-case */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2C8377324C7310F001665FA /* Build configuration list for PBXNativeTarget "Mobillium-case" */;
+			buildPhases = (
+				C2C8374524C7310E001665FA /* Sources */,
+				C2C8374624C7310E001665FA /* Frameworks */,
+				C2C8374724C7310E001665FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mobillium-case";
+			productName = "Mobillium-case";
+			productReference = C2C8374924C7310E001665FA /* Mobillium-case.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2C8375E24C7310F001665FA /* Mobillium-caseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2C8377624C7310F001665FA /* Build configuration list for PBXNativeTarget "Mobillium-caseTests" */;
+			buildPhases = (
+				C2C8375B24C7310F001665FA /* Sources */,
+				C2C8375C24C7310F001665FA /* Frameworks */,
+				C2C8375D24C7310F001665FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2C8376124C7310F001665FA /* PBXTargetDependency */,
+			);
+			name = "Mobillium-caseTests";
+			productName = "Mobillium-caseTests";
+			productReference = C2C8375F24C7310F001665FA /* Mobillium-caseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2C8376924C7310F001665FA /* Mobillium-caseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2C8377924C7310F001665FA /* Build configuration list for PBXNativeTarget "Mobillium-caseUITests" */;
+			buildPhases = (
+				C2C8376624C7310F001665FA /* Sources */,
+				C2C8376724C7310F001665FA /* Frameworks */,
+				C2C8376824C7310F001665FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2C8376C24C7310F001665FA /* PBXTargetDependency */,
+			);
+			name = "Mobillium-caseUITests";
+			productName = "Mobillium-caseUITests";
+			productReference = C2C8376A24C7310F001665FA /* Mobillium-caseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2C8374124C7310E001665FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					C2C8374824C7310E001665FA = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					C2C8375E24C7310F001665FA = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = C2C8374824C7310E001665FA;
+					};
+					C2C8376924C7310F001665FA = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = C2C8374824C7310E001665FA;
+					};
+				};
+			};
+			buildConfigurationList = C2C8374424C7310E001665FA /* Build configuration list for PBXProject "Mobillium-case" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2C8374024C7310E001665FA;
+			productRefGroup = C2C8374A24C7310E001665FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2C8374824C7310E001665FA /* Mobillium-case */,
+				C2C8375E24C7310F001665FA /* Mobillium-caseTests */,
+				C2C8376924C7310F001665FA /* Mobillium-caseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2C8374724C7310E001665FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C837FC24C74C7B001665FA /* Colors.xcassets in Resources */,
+				C2C8384024C761DF001665FA /* Images.xcassets in Resources */,
+				C2C8375924C7310F001665FA /* LaunchScreen.storyboard in Resources */,
+				C2C8375624C7310F001665FA /* App.xcassets in Resources */,
+				C2C8384224C76521001665FA /* Icons.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2C8375D24C7310F001665FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2C8376824C7310F001665FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2C8374524C7310E001665FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C837B724C7367A001665FA /* LoginPresenter.swift in Sources */,
+				C2C8379B24C7348B001665FA /* MCInteractor.swift in Sources */,
+				C2C837B824C7367A001665FA /* LoginWorker.swift in Sources */,
+				C2C837E124C73F83001665FA /* ConstraintAttributes.swift in Sources */,
+				C2C837EB24C742CB001665FA /* MCLabel.swift in Sources */,
+				C2C8375124C7310E001665FA /* ViewController.swift in Sources */,
+				C2C8379524C73472001665FA /* MCModel.swift in Sources */,
+				C2C8379324C7346C001665FA /* MCRouter.swift in Sources */,
+				C2C837BA24C7367A001665FA /* LoginModels.swift in Sources */,
+				C2C837DB24C73F83001665FA /* Logger.swift in Sources */,
+				C2C8378D24C7344A001665FA /* MCBuilder.swift in Sources */,
+				C2C837DF24C73F83001665FA /* ConstraintTypealias.swift in Sources */,
+				C2C837C124C736C0001665FA /* Then.swift in Sources */,
+				C2C837E624C73F83001665FA /* ConstraintArrayCompatible.swift in Sources */,
+				C2C8384424C775CB001665FA /* UILabel.swift in Sources */,
+				C2C837E524C73F83001665FA /* ConstraintSuper.swift in Sources */,
+				C2C837E724C73F83001665FA /* ConstraintVerboseName.swift in Sources */,
+				C2C837DC24C73F83001665FA /* LoggerTypes.swift in Sources */,
+				C2C837BD24C7367A001665FA /* LoginInteractor.swift in Sources */,
+				C2C8379924C73483001665FA /* MCViewController.swift in Sources */,
+				C2C8378F24C73459001665FA /* MCPresenter.swift in Sources */,
+				C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */,
+				C2C837FA24C748D4001665FA /* OvalActionButton.swift in Sources */,
+				C2C837E824C73F83001665FA /* ConstraintAssociatedKeys.swift in Sources */,
+				C2C837DD24C73F83001665FA /* LoggerArrayCompatible.swift in Sources */,
+				C2C837C324C73F06001665FA /* LeftImageFormTextFieldItem.swift in Sources */,
+				C2C8374F24C7310E001665FA /* SceneDelegate.swift in Sources */,
+				C2C837E024C73F83001665FA /* ConstraintGet.swift in Sources */,
+				C2C837BB24C7367A001665FA /* LoginViewController.swift in Sources */,
+				C2C837EE24C7431A001665FA /* String.swift in Sources */,
+				C2C837F324C74652001665FA /* FormTextFieldItem.swift in Sources */,
+				C2C837D924C73F83001665FA /* Globals.swift in Sources */,
+				C2C837DE24C73F83001665FA /* ConstraintTypes.swift in Sources */,
+				C2C837E424C73F83001665FA /* ConstraintActivate.swift in Sources */,
+				C2C837DA24C73F83001665FA /* UILab.swift in Sources */,
+				C2C837F024C74569001665FA /* FormView.swift in Sources */,
+				C2C8380224C74D26001665FA /* MCGradientLayer.swift in Sources */,
+				C2C8379724C7347B001665FA /* MCView.swift in Sources */,
+				C2C837B924C7367A001665FA /* LoginRouter.swift in Sources */,
+				C2C837BE24C7367A001665FA /* LoginView.swift in Sources */,
+				C2C8379124C73461001665FA /* MCWorker.swift in Sources */,
+				C2C837F824C74873001665FA /* MCButton.swift in Sources */,
+				C2C837F624C74837001665FA /* ActionFormView.swift in Sources */,
+				C2C837E224C73F83001665FA /* ConstraintLogAdapter.swift in Sources */,
+				C2C837BC24C7367A001665FA /* LoginBuilder.swift in Sources */,
+				C2C837E324C73F83001665FA /* ConstraintSet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2C8375B24C7310F001665FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C8376424C7310F001665FA /* Mobillium_caseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2C8376624C7310F001665FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C8376F24C7310F001665FA /* Mobillium_caseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2C8376124C7310F001665FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2C8374824C7310E001665FA /* Mobillium-case */;
+			targetProxy = C2C8376024C7310F001665FA /* PBXContainerItemProxy */;
+		};
+		C2C8376C24C7310F001665FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2C8374824C7310E001665FA /* Mobillium-case */;
+			targetProxy = C2C8376B24C7310F001665FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2C8375724C7310F001665FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2C8375824C7310F001665FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2C8377124C7310F001665FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2C8377224C7310F001665FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2C8377424C7310F001665FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432CKYPT28;
+				INFOPLIST_FILE = "Mobillium-case/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinkbas.Mobillium-case";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2C8377524C7310F001665FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432CKYPT28;
+				INFOPLIST_FILE = "Mobillium-case/Supporting files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinkbas.Mobillium-case";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2C8377724C7310F001665FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432CKYPT28;
+				INFOPLIST_FILE = "Mobillium-caseTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinkbas.Mobillium-caseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobillium-case.app/Mobillium-case";
+			};
+			name = Debug;
+		};
+		C2C8377824C7310F001665FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432CKYPT28;
+				INFOPLIST_FILE = "Mobillium-caseTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinkbas.Mobillium-caseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mobillium-case.app/Mobillium-case";
+			};
+			name = Release;
+		};
+		C2C8377A24C7310F001665FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432CKYPT28;
+				INFOPLIST_FILE = "Mobillium-caseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinkbas.Mobillium-caseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobillium-case";
+			};
+			name = Debug;
+		};
+		C2C8377B24C7310F001665FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 432CKYPT28;
+				INFOPLIST_FILE = "Mobillium-caseUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yasinkbas.Mobillium-caseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mobillium-case";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2C8374424C7310E001665FA /* Build configuration list for PBXProject "Mobillium-case" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2C8377124C7310F001665FA /* Debug */,
+				C2C8377224C7310F001665FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2C8377324C7310F001665FA /* Build configuration list for PBXNativeTarget "Mobillium-case" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2C8377424C7310F001665FA /* Debug */,
+				C2C8377524C7310F001665FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2C8377624C7310F001665FA /* Build configuration list for PBXNativeTarget "Mobillium-caseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2C8377724C7310F001665FA /* Debug */,
+				C2C8377824C7310F001665FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2C8377924C7310F001665FA /* Build configuration list for PBXNativeTarget "Mobillium-caseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2C8377A24C7310F001665FA /* Debug */,
+				C2C8377B24C7310F001665FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2C8374124C7310E001665FA /* Project object */;
+}

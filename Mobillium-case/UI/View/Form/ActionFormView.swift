@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol ActionFormViewDelegate: class {
+    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: MCButton)
+}
+
 class ActionFormView: FormView {
+    
+    weak var delegate: ActionFormViewDelegate?
     
     enum ActionType {
         case `default`
@@ -21,8 +27,8 @@ class ActionFormView: FormView {
             content.symbol
         }
         
-        var actionButton: OvalGradientActionButton {
-            OvalGradientActionButton(colors: colors, symbol: symbol)
+        var actionButton: CircleGradientButton {
+            CircleGradientButton(colors: colors, symbol: symbol)
         }
         
         private var content: (colors: [UIColor], symbol: String) {
@@ -44,6 +50,7 @@ class ActionFormView: FormView {
     ) {
         self.actionType = actionType
         super.init(items, title: title)
+        actionButton.addTarget(self, action: #selector(didTapActionButton), for: .touchUpInside)
         configureAppearance()
     }
     
@@ -54,6 +61,11 @@ class ActionFormView: FormView {
     private func configureAppearance() {
         addSubview(actionButton)
         actionButton.set(.rightOf(self, 16), .centerYOf(containerView), .width(48), .height(48))
+    }
+    
+    @objc
+    private func didTapActionButton(_ sender: MCButton) {
+        delegate?.actionFormViewDelegate(self, didTapActionButton: sender)
     }
     
 }

@@ -8,16 +8,13 @@
 import UIKit
 
 protocol RegisterPresentationLogic {
-    func presentSomething(response: Register.Something.Response)
+    func presentRegisterAccess(response: Response)
 }
 
-class RegisterPresenter: RegisterPresentationLogic {
+class RegisterPresenter: MCPresenter<RegisterView, RegisterRouter, RegisterViewController>, RegisterPresentationLogic {
     weak var viewController: RegisterDisplayLogic?
     
-    // MARK: Do something
-    
-    func presentSomething(response: Register.Something.Response) {
-        let viewModel = Register.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentRegisterAccess(response: Response) {
+        viewController?.processResponseIfValidated(response: response)
     }
 }

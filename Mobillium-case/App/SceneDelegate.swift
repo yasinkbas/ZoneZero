@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = LoginBuilder().make()
-        window?.makeKeyAndVisible()
+        let container = AppContainer(window: window)
+        container.router.initializeViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {}

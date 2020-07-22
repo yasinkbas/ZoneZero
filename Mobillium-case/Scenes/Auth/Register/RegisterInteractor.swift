@@ -8,25 +8,21 @@
 import UIKit
 
 protocol RegisterBusinessLogic {
-    func doSomething(request: Register.Something.Request)
+    func register(viewModel: Register.FormModel.ViewModel)
 }
 
-protocol RegisterDataStore {
-    //var name: String { get set }
-}
+protocol RegisterDataStore { }
 
 class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore {
     var presenter: RegisterPresentationLogic?
-    var worker: RegisterWorker?
-    //var name: String = ""
+    var authenticationWorker: RegisterAuthenticationWorkerLogic
     
-    // MARK: Do something
+    init() {
+        authenticationWorker = RegisterAuthenticationWorker()
+    }
     
-    func doSomething(request: Register.Something.Request) {
-        worker = RegisterWorker()
-        worker?.doSomeWork()
-        
-        let response = Register.Something.Response()
-        presenter?.presentSomething(response: response)
+    func register(viewModel: Register.FormModel.ViewModel) {
+        let response = authenticationWorker.authenticate(viewModel: viewModel)
+        presenter?.presentRegisterAccess(response: response)
     }
 }

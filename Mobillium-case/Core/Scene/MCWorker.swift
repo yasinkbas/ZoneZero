@@ -7,6 +7,6 @@
 
 import UIKit
 
-class YSWorker {
+class MCWorker {
 
 }

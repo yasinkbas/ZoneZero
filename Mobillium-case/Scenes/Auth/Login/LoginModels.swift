@@ -8,19 +8,11 @@
 import UIKit
 
 enum Login {
-    // MARK: Use cases
-    
-    enum Something {
-        struct Request {
-            
-        }
-        
-        struct Response {
-            
-        }
-        
+    enum FormModel {
         struct ViewModel {
-            
+            let username: String?
+            let password: String?
         }
     }
+    
 }

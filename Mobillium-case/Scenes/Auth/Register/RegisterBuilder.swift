@@ -7,8 +7,8 @@
 
 import UIKit
 
-class RegisterWorker {
-    func make() -> RegisterViewController<RegisterView> {
+class RegisterBuilder: MCBuilder {
+    func make() -> RegisterViewController {
         let view = RegisterView()
         let viewController = RegisterViewController(view: view)
         let interactor = RegisterInteractor()

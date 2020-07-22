@@ -8,25 +8,23 @@
 import UIKit
 
 protocol LoginBusinessLogic {
-    func doSomething(request: Login.Something.Request)
+    func login(viewModel: Login.FormModel.ViewModel)
 }
 
-protocol LoginDataStore {
-    //var name: String { get set }
-}
+protocol LoginDataStore { }
 
 class LoginInteractor: LoginBusinessLogic, LoginDataStore {
+    
     var presenter: LoginPresentationLogic?
-    var worker: LoginWorker?
-    //var name: String = ""
+    var authenticationWorker: LoginAuthenticationWorker
     
-    // MARK: Do something
-    
-    func doSomething(request: Login.Something.Request) {
-        worker = LoginWorker()
-        worker?.doSomeWork()
+    init() {
+        authenticationWorker = LoginAuthenticationWorker()
+    }
+
+    func login(viewModel: Login.FormModel.ViewModel) {
+        let response = authenticationWorker.authenticate(viewModel: viewModel)
         
-        let response = Login.Something.Response()
-        presenter?.presentSomething(response: response)
+        presenter?.presentLoginAccess(response: response)
     }
 }

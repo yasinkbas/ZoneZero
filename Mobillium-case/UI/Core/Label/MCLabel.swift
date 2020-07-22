@@ -10,20 +10,20 @@ import UIKit
 class MCLabel: UILabel {
     
     init(
-        text: String                = .none,
-        textStyle: UIFont.TextStyle = .body,
-        color: UIColor              = .secondaryLabel,
-        textAlignment: NSTextAlignment = .center,
-        fontName: String = .none,
-        weight: UIFont.Weight = .regular,
-        fontSize: CGFloat
+        text: String                    = .none,
+        textStyle: UIFont.TextStyle     = .body,
+        color: UIColor                  = .secondaryLabel,
+        textAlignment: NSTextAlignment  = .center,
+        fontName: String                = .none,
+        weight: UIFont.Weight           = .regular,
+        fontSize: CGFloat               = 14
     ) {
         super.init(frame: .zero)
-        self.text           = text
-        self.font           = UIFont.preferredFont(forTextStyle: textStyle)
-        self.textColor      = color
-        self.textAlignment  = textAlignment
-        self.font           = .systemFont(ofSize: fontSize, weight: weight)
+        self.text                       = text
+        self.font                       = UIFont.preferredFont(forTextStyle: textStyle)
+        self.textColor                  = color
+        self.textAlignment              = textAlignment
+        self.font                       = .systemFont(ofSize: fontSize, weight: weight)
         setFont(fontName: fontName, size: fontSize)
         configureAppearance()
     }

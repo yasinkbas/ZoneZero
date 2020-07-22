@@ -10,63 +10,79 @@ import UIKit
 class MCViewController<View: MCView, Router: MCRouter>: UIViewController {
     var v: View? { view as? View }
     
-//    var interactor: MainBusinessLogic?
-//    var router: (NSObjectProtocol & MainRoutingLogic & MainDataPassing)?
-//    var interactor: MCInteractor?
-    var router: MCRouter?
+    var router: Router?
     
     // MARK: - Initialize
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         configureAppearance()
-        setup()
+        setupListeners()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configureAppearance()
-        setup()
+        setupListeners()
     }
     
     convenience init(view: View) {
         self.init(nibName: nil, bundle: nil)
         self.view = view
+        configureAppearance()
+        setupListeners()
     }
     
-    func setup() { }
     
     func configureAppearance() { }
+    func setupListeners() { }
     
-    // MARK: - View lifecycle
+    // MARK: - Overrides
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: View motion process
+    
+    override func present(
+        _ viewControllerToPresent: UIViewController,
+        animated flag: Bool,
+        completion: (() -> Void)? = nil) {
+        viewControllerToPresent.modalPresentationStyle = .fullScreen
+        super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
-    
-    override func loadView() {
-        super.loadView()
-    
-    }
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
+}
 
+// MARK: - Alert
+extension MCViewController {
+        enum AlertActionType {
+            typealias Handler = ((UIAlertAction) -> ())
+            case ok(Handler? = nil)
+            case cancel(Handler? = nil)
+            
+            var handler: Handler? {
+                value.handler
+            }
+            
+            var title: String {
+                value.title
+            }
+            
+            var actionStyle: UIAlertAction.Style {
+                value.style
+            }
+            
+            private var value: (title: String, handler: Handler?, style: UIAlertAction.Style) {
+                switch self {
+                    case let .ok(handler): return ("Ok", handler, .default)
+                    case let .cancel(handler): return ("Cancel", handler, .cancel)
+                }
+            }
+        }
+    
+    
+    func showAlert(title: String, message: String, actions: [AlertActionType]) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach {
+            alertController.addAction(UIAlertAction(title: $0.title, style: $0.actionStyle, handler: $0.handler))
+        }
+        present(alertController, animated: true)
+    }
 }

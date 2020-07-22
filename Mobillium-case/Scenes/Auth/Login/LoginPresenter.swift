@@ -8,16 +8,13 @@
 import UIKit
 
 protocol LoginPresentationLogic {
-    func presentSomething(response: Login.Something.Response)
+    func presentLoginAccess(response: Response)
 }
 
 class LoginPresenter: MCPresenter<LoginView, LoginRouter, LoginViewController>, LoginPresentationLogic {
     weak var viewController: LoginDisplayLogic?
     
-    // MARK: Do something
-    
-    func presentSomething(response: Login.Something.Response) {
-        let viewModel = Login.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentLoginAccess(response: Response) {
+        viewController?.processResponseIfValidated(response: response)
     }
 }

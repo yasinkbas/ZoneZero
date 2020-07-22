@@ -55,13 +55,27 @@ class FormView: UIView {
         let itemsInsets = layout.eachItem_topInset * CGFloat(items.count)
         let width: CGFloat  = bounds.width - 60
         let height: CGFloat =
-            layout.titleLabel_topInset +
-            titleLabel.requiredHeight +
-            layout.containerView_topInset +
-            itemsInsets +
+            layout.titleLabel_topInset      +
+            titleLabel.requiredHeight       +
+            layout.containerView_topInset   +
+            itemsInsets                     +
             layout.containerView_topInset
         
         return CGSize(width: width, height: height)
+    }
+    
+    func getItem(with id: String) -> FormItemView? {
+        let optionalIndex = items.firstIndex { $0.id == id }
+        guard let index = optionalIndex else { return nil }
+        return items[index]
+    }
+    
+    func getTextFieldText(with id: String) -> String? {
+        if let item = getItem(with: id), let textField = item as? UITextField {
+            return textField.text
+        }
+        
+        return nil
     }
 }
 
@@ -76,7 +90,5 @@ extension FormView {
         let item_trailingInset: CGFloat     = 16
     }
 }
-
-protocol FormItem {}
 
 

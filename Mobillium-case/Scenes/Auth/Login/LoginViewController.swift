@@ -8,41 +8,33 @@
 import UIKit
 
 protocol LoginDisplayLogic: class {
-    func displaySomething(viewModel: Login.Something.ViewModel)
+    func processResponseIfValidated(response: Response)
 }
 
 class LoginViewController : MCViewController<LoginView, LoginRouter>, LoginDisplayLogic {
     
     var interactor: LoginInteractor?
     
-    // MARK: Routing
+    override func setupListeners() {
+        super.setupListeners()
+        v?.delegate = self
+    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
+    func processResponseIfValidated(response: Response) {
+        if let response = response as? ErrorResponse {
+            showAlert(title: response.title, message: response.content, actions: [.ok(nil)])
+        } else if let _ = response as? SuccessResponse {
+            router?.routeMovieList()
         }
     }
-    
-    // MARK: View lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        doSomething()
+}
+
+extension LoginViewController: LoginViewDelegate {
+    func loginView(_ loginView: LoginView, didTapActionButton actionButton: MCButton, viewModel: Login.FormModel.ViewModel) {
+        interactor?.login(viewModel: viewModel)
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething() {
-//        let request = Login.Something.Request()
-//        interactor?.doSomething(request: request)
-    }
-    
-    func displaySomething(viewModel: Login.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: MCButton, formModel: Login.FormModel.ViewModel) {
+        router?.routeBackRegister()
     }
 }

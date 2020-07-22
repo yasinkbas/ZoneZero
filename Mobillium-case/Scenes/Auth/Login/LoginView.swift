@@ -7,32 +7,38 @@
 
 import UIKit
 
-class LoginView: MCView {
+protocol LoginViewDelegate: class {
+    func loginView(_ loginView: LoginView, didTapActionButton actionButton: MCButton, viewModel: Login.FormModel.ViewModel)
+    func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: MCButton, formModel: Login.FormModel.ViewModel)
+}
+
+final class LoginView: AuthView {
     
-    lazy var imageView = UIImageView().then { imageView in
-//        imageView.image = UIImage(named: "background-night")
-        imageView.image = UIImage(named: "background")
-        imageView.contentMode = .scaleAspectFill
+    weak var delegate: LoginViewDelegate?
+    
+    override var alternateButtonTitle: String { "Do you want to register" }
+    
+    override func initial() {
+        super.initial()
+        formView = LoginFormView()
     }
     
-    lazy var formView = LoginFormView()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+    override func setupListeners() {
+        super.setupListeners()
+        formView.delegate = self
+        alternateButton.addTarget(self, action: #selector(didTapAlternateButton), for: .touchUpInside)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented.")
+    @objc
+    func didTapAlternateButton(_ sender: MCButton) {
+        delegate?.loginView(self, didTapAlternateButton: sender, formModel: getFormViewModel(from: formView))
     }
     
-    override func configureAppearance() {
-        addSubview(imageView)
-        imageView.equalToSuper()
+    private func getFormViewModel(from actionFormView: ActionFormView) -> Login.FormModel.ViewModel {
+        let username = actionFormView.getTextFieldText(with: "username")
+        let password = actionFormView.getTextFieldText(with: "password")
         
-        addSubview(formView)
-        formView.set(.center(self), .widthOf(self, formView.suggestedSize(self).width), .height(formView.suggestedSize(self).height))
-        
+        return .init(username: username, password: password)
     }
 }
 
@@ -42,8 +48,8 @@ extension LoginView {
             super.init(
                 actionType: .default,
                 items: [
-                    FormTextFieldItem(image: UIImage(named: "user")!, placeholder: "Username", isSecured: false),
-                    FormTextFieldItem(image: UIImage(named: "password")!, placeholder: "Password", isSecured: true)
+                    FormTextFieldItem(id: "username", image: UIImage(named: "user")!, placeholder: "Username", isSecured: false),
+                    FormTextFieldItem(id: "password", image: UIImage(named: "password")!, placeholder: "Password", isSecured: true)
                 ],
                 title: MCLabel(
                     text: "Login",
@@ -55,10 +61,16 @@ extension LoginView {
                 )
             )
         }
-        
+
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
+    }
+}
+
+extension LoginView: ActionFormViewDelegate {
+    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: MCButton) {
+        delegate?.loginView(self, didTapActionButton: actionButton, viewModel: getFormViewModel(from: formView))
     }
 }
 

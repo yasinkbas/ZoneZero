@@ -7,20 +7,13 @@
 
 import UIKit
 
-enum Register {
-    // MARK: Use cases
-    
-    enum Something {
-        struct Request {
-            
-        }
-        
-        struct Response {
-            
-        }
-        
+enum Register {    
+    enum FormModel {
         struct ViewModel {
-            
+            let name: String?
+            let username: String?
+            let password: String?
+            let repassword: String?
         }
     }
 }

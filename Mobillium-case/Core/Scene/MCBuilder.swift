@@ -7,17 +7,18 @@
 
 import UIKit
 
-protocol MCRoutable { }
+protocol MCViewPresenter {
+    func route() -> UIViewController?
+}
 
-protocol MCBuilder: MCRoutable {
-    associatedtype View: MCView
-    associatedtype Router: MCRouter
-    associatedtype Presenter: MCPresenter<View, Router, ViewController>
-    associatedtype Interactor: MCInteractor<View, Router, ViewController, Presenter>
-    associatedtype ViewController: MCViewController<View, Router>
+protocol MCBuilder: MCViewPresenter {
     associatedtype Buildable: MCBuildable
     
     func make() -> Buildable
+}
+
+extension MCBuilder {
+    func route() -> UIViewController? { make() as? UIViewController }
 }
 
 protocol MCBuildable { }

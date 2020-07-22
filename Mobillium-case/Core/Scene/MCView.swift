@@ -12,6 +12,7 @@ class MCView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureAppearance()
+        setupListeners()
         hideKeyboardWhenTapped()
     }
     
@@ -20,6 +21,7 @@ class MCView: UIView {
     }
     
     func configureAppearance() { }
+    func setupListeners() { }
     
     // MARK:- Hiding Keyboard
     private func hideKeyboardWhenTapped() {

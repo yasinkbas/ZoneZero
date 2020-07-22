@@ -8,69 +8,34 @@
 import UIKit
 
 protocol RegisterDisplayLogic: class {
-    func displaySomething(viewModel: Register.Something.ViewModel)
+    func processResponseIfValidated(response: Response)
 }
 
-class RegisterViewController<View: RegisterView> : UIViewController, RegisterDisplayLogic {
-    var v: View? {
-        return view as? View
-    }
+class RegisterViewController:MCViewController<RegisterView, RegisterRouter>, RegisterDisplayLogic {
     
     var interactor: RegisterBusinessLogic?
-    var router: (NSObjectProtocol & RegisterRoutingLogic & RegisterDataPassing)?
     
-    // MARK: Object lifecycle
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        setup()
+    override func setupListeners() {
+        super.setupListeners()
+        v?.delegate = self
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    convenience init(view: View) {
-        self.init(nibName: nil, bundle: nil)
-        self.view = view
-        setup()
-    }
-    
-    // MARK: Setup
-    
-    private func setup() {
-        
-    }
-    
-    // MARK: Routing
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
+    func processResponseIfValidated(response: Response) {
+        if let response = response as? ErrorResponse {
+            showAlert(title: response.title, message: response.content, actions: [.ok(nil)])
+        } else if let _ = response as? SuccessResponse {
+            router?.routeMovieList()
         }
     }
-    
-    // MARK: View lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        doSomething()
+}
+
+extension RegisterViewController: RegisterViewDelegate {
+    func registerView(_ registerView: RegisterView, didTapActionButton actionButton: MCButton, viewModel: Register.FormModel.ViewModel) {
+        interactor?.register(viewModel: viewModel)
     }
     
-    // MARK: Do something
-    
-    //@IBOutlet weak var nameTextField: UITextField!
-    
-    func doSomething() {
-        let request = Register.Something.Request()
-        interactor?.doSomething(request: request)
-    }
-    
-    func displaySomething(viewModel: Register.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func registerView(_ registerView: RegisterView, didTapAlternateButton alternateButton: MCButton, viewModel: Register.FormModel.ViewModel) {
+        router?.routeLogin()
     }
 }
+

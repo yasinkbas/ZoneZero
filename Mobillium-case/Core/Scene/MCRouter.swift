@@ -8,20 +8,36 @@
 import UIKit
 
 class MCRouter: NSObject {
-    func route(builder: MCRoutable) {
-//      if let segue = segue {
-//        let destinationVC = segue.destination as! SomewhereViewController
-//        var destinationDS = destinationVC.router!.dataStore!
-//        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//      } else {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//        var destinationDS = destinationVC.router!.dataStore!
-//        passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//        navigateToSomewhere(source: viewController!, destination: destinationVC)
-//      }
-        
-        
+    func route(_ viewController: UIViewController?, builder: MCViewPresenter, presentationStyle: PresentationStyle) {
+        presentationStyle.start(viewController: viewController, to: builder)
     }
+}
 
+enum PresentationStyle {
+    case show
+    case toRight
+    case toLeft
+    
+    func start(viewController: UIViewController?, to builder: MCViewPresenter) {
+        switch self {
+        case .show:
+            viewController?.present(builder.route()!, animated: true, completion: nil)
+        case .toRight:
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromLeft
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            viewController?.view.window!.layer.add(transition, forKey: kCATransition)
+            viewController?.present(builder.route()!, animated: false, completion: nil)
+        case .toLeft:
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromRight
+            transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+            viewController?.view.window!.layer.add(transition, forKey: kCATransition)
+            viewController?.present(builder.route()!, animated: false, completion: nil)
+        }
+    }
 }

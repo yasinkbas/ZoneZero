@@ -7,7 +7,8 @@
 
 import UIKit
 
-class LoginBuilder {
+class LoginBuilder: MCBuilder {    
+    
     func make() -> LoginViewController {
         let view = LoginView()
         let viewController = LoginViewController(view: view)

@@ -8,13 +8,16 @@
 import UIKit
 
 class FormTextFieldItem: UITextField, FormItem {
+    var id: String
     let image: UIImage
     
     init(
+        id: String,
         image: UIImage,
         placeholder: String = .none,
         isSecured: Bool = false
     ) {
+        self.id = id
         self.image = image
         super.init(frame: .zero)
         self.placeholder        = placeholder

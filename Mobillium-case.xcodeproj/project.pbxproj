@@ -24,6 +24,8 @@
 		C21F0B2F24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2E24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift */; };
 		C2A437E424C911D400D45895 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E324C911D400D45895 /* Checkbox.swift */; };
 		C2A437E724C911E400D45895 /* MCCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E624C911E400D45895 /* MCCheckbox.swift */; };
+		C2A437E924C917F400D45895 /* CheckboxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E824C917F400D45895 /* CheckboxLabel.swift */; };
+		C2A437EC24C91CD600D45895 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437EB24C91CD600D45895 /* Optional.swift */; };
 		C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374C24C7310E001665FA /* AppDelegate.swift */; };
 		C2C8374F24C7310E001665FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374E24C7310E001665FA /* SceneDelegate.swift */; };
 		C2C8375124C7310E001665FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8375024C7310E001665FA /* ViewController.swift */; };
@@ -113,6 +115,8 @@
 		C21F0B2E24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthenticationWorker.swift; sourceTree = "<group>"; };
 		C2A437E324C911D400D45895 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		C2A437E624C911E400D45895 /* MCCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCheckbox.swift; sourceTree = "<group>"; };
+		C2A437E824C917F400D45895 /* CheckboxLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxLabel.swift; sourceTree = "<group>"; };
+		C2A437EB24C91CD600D45895 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		C2C8374924C7310E001665FA /* Mobillium-case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobillium-case.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C8374C24C7310E001665FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C8374E24C7310E001665FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,8 +246,17 @@
 			isa = PBXGroup;
 			children = (
 				C2A437E624C911E400D45895 /* MCCheckbox.swift */,
+				C2A437E824C917F400D45895 /* CheckboxLabel.swift */,
 			);
 			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		C2A437EA24C91C9C00D45895 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				C2C837C424C73F1F001665FA /* Modules */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 		C2C8374024C7310E001665FA = {
@@ -273,9 +286,10 @@
 				C2C8378024C7314F001665FA /* Scenes */,
 				C2C8377F24C7314B001665FA /* Classes */,
 				C2C8377E24C7313B001665FA /* UI */,
-				C2C8378924C7331E001665FA /* Utility */,
+				C2C8378A24C73322001665FA /* Extensions */,
 				C2C8377C24C7311A001665FA /* App */,
 				C2C8377D24C7312C001665FA /* Supporting files */,
+				C2A437EA24C91C9C00D45895 /* External */,
 				C2C8375024C7310E001665FA /* ViewController.swift */,
 			);
 			path = "Mobillium-case";
@@ -397,15 +411,6 @@
 				C2C8384124C76521001665FA /* Icons.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		C2C8378924C7331E001665FA /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				C2C837C424C73F1F001665FA /* Modules */,
-				C2C8378A24C73322001665FA /* Extensions */,
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		C2C8378A24C73322001665FA /* Extensions */ = {
@@ -551,6 +556,7 @@
 			children = (
 				C2C837ED24C7431A001665FA /* String.swift */,
 				C2C8384324C775CB001665FA /* UILabel.swift */,
+				C2A437EB24C91CD600D45895 /* Optional.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -786,6 +792,7 @@
 				C21F0B1624C889B50070C31E /* RegisterRouter.swift in Sources */,
 				C2C837D924C73F83001665FA /* Globals.swift in Sources */,
 				C2C837DE24C73F83001665FA /* ConstraintTypes.swift in Sources */,
+				C2A437EC24C91CD600D45895 /* Optional.swift in Sources */,
 				C21F0B1724C889B50070C31E /* RegisterModels.swift in Sources */,
 				C21F0B2F24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift in Sources */,
 				C2C837E424C73F83001665FA /* ConstraintActivate.swift in Sources */,
@@ -797,6 +804,7 @@
 				C2C837BE24C7367A001665FA /* LoginView.swift in Sources */,
 				C2C8379124C73461001665FA /* MCWorker.swift in Sources */,
 				C2C837F824C74873001665FA /* MCButton.swift in Sources */,
+				C2A437E924C917F400D45895 /* CheckboxLabel.swift in Sources */,
 				C2C837F624C74837001665FA /* ActionFormView.swift in Sources */,
 				C2C837E224C73F83001665FA /* ConstraintLogAdapter.swift in Sources */,
 				C2C837BC24C7367A001665FA /* LoginBuilder.swift in Sources */,

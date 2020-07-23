@@ -12,6 +12,8 @@ enum Login {
         struct ViewModel {
             let username: String?
             let password: String?
+            let isRemindMe: Bool
+            let acceptPromotion: Bool
         }
     }
     

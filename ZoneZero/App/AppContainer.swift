@@ -12,14 +12,10 @@ final class AppContainer {
     
     init(window: UIWindow?) {
         router = AppRouter(window: window)
-        setup()
+        configureUILab()
     }
     
-    func setup() {
-        setUILab()
-    }
-    
-    func setUILab() {
+    func configureUILab() {
         UILab.Settings.debug = true
     }
 }

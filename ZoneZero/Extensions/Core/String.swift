@@ -11,8 +11,7 @@ extension String {
     static var none = ""
 }
 
-// Fonts
-
+//MARK: - Fonts
 extension String {
     static var avenirNext_demibold = "AvenirNext-DemiBold"
 }

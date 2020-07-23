@@ -332,8 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C837E924C742C1001665FA /* Core */,
-				C2C8378524C7316E001665FA /* Label */,
-				C2C8378424C7316A001665FA /* TextField */,
+				C2C8380024C74D1D001665FA /* Layer */,
 				C2C8378324C73166001665FA /* Button */,
 				C2C8378224C7315F001665FA /* View */,
 			);
@@ -352,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C8379C24C73573001665FA /* Auth */,
+				C2D8583224C936C7002E50F5 /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -380,20 +380,6 @@
 				C21F0B2524C89EE00070C31E /* OvalButton.swift */,
 			);
 			path = Button;
-			sourceTree = "<group>";
-		};
-		C2C8378424C7316A001665FA /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
-		C2C8378524C7316E001665FA /* Label */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Label;
 			sourceTree = "<group>";
 		};
 		C2C8378624C73190001665FA /* Assets */ = {
@@ -537,7 +523,6 @@
 		C2C837E924C742C1001665FA /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				C2C8380024C74D1D001665FA /* Layer */,
 				C2C837FF24C74D13001665FA /* Button */,
 				C2C837FE24C74D0E001665FA /* Label */,
 				C2C837FD24C74D0A001665FA /* View */,
@@ -605,6 +590,21 @@
 				C2C8380124C74D26001665FA /* ZZGradientLayer.swift */,
 			);
 			path = Layer;
+			sourceTree = "<group>";
+		};
+		C2D8583224C936C7002E50F5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C2D8583324C936CD002E50F5 /* MovieList */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C2D8583324C936CD002E50F5 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

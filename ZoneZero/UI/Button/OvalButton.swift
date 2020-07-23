@@ -12,13 +12,13 @@ class OvalButton: ZZButton {
     let titleFontSize: CGFloat
     
     init(
-        backgroundColor: UIColor,
-        title: String = .none,
-        cornerRadius: CGFloat,
-        titleFontSize: CGFloat = 24
+        backgroundColor: UIColor    = .clear,
+        title: String               = .none,
+        cornerRadius: CGFloat       = 8,
+        titleFontSize: CGFloat      = 24
     ) {
-        self.cornerRadius = cornerRadius
-        self.titleFontSize = titleFontSize
+        self.cornerRadius           = cornerRadius
+        self.titleFontSize          = titleFontSize
         super.init(backgroundColor: backgroundColor, title: title)
         customizeAppearance()
     }

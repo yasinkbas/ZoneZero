@@ -21,22 +21,22 @@ class ZZCheckbox: UIView {
     let checkMarkWidth: CGFloat = 3
     
     lazy var frameLayer = CAShapeLayer().then { frameLayer in
-        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: _width, height: _height), cornerRadius: cornerRadius)
-        frameLayer.path = path.cgPath
-        frameLayer.strokeColor = UIColor.black.cgColor
-        frameLayer.fillColor = UIColor.white.cgColor
+        let path                = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: _width, height: _height), cornerRadius: cornerRadius)
+        frameLayer.path         = path.cgPath
+        frameLayer.strokeColor  = UIColor.black.cgColor
+        frameLayer.fillColor    = UIColor.white.cgColor
     }
     
     lazy var checkMarkLayer = CAShapeLayer().then { checkLayer in
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 5, y: _height / 2))
-        path.addLine(to: CGPoint(x: 5 + _width / 4, y: _height - 5))
-        path.addLine(to: CGPoint(x: _width - 5, y: 5))
+        path.move               (to: CGPoint(x: 5, y: _height / 2))
+        path.addLine            (to: CGPoint(x: 5 + _width / 4, y: _height - 5))
+        path.addLine            (to: CGPoint(x: _width - 5, y: 5))
         
-        checkLayer.path = path.cgPath
-        checkLayer.strokeColor = UIColor.black.cgColor
-        checkLayer.fillColor = UIColor.clear.cgColor
-        checkLayer.lineWidth = checkMarkWidth
+        checkLayer.path         = path.cgPath
+        checkLayer.strokeColor  = UIColor.black.cgColor
+        checkLayer.fillColor    = UIColor.clear.cgColor
+        checkLayer.lineWidth    = checkMarkWidth
     }
     
     var isChecked: Bool = false {
@@ -68,6 +68,6 @@ class ZZCheckbox: UIView {
     }
     
     func customizeAppearance() {
-        // the content might be held subclass
+        // the content might be held at subclass
     }
 }

@@ -20,8 +20,8 @@ class CircleButton: ZZButton {
 class CircleShadowButton: CircleButton {
     
     var shadowLayer: CAShapeLayer!
-    var hasShadowLayer = false
-    var shadowLayerShowedCount = 0
+    var hasShadowLayer          = false
+    var shadowLayerShowedCount  = 0
     
     init(backgroundColor: UIColor, image: UIImage) {
         super.init(backgroundColor: backgroundColor, title: "")
@@ -34,17 +34,17 @@ class CircleShadowButton: CircleButton {
     
     func setupShadowLayer(cornerRadius: CGFloat) {
         if hasShadowLayer && shadowLayerShowedCount > 2 { return }
-        shadowLayerShowedCount += 1
-        hasShadowLayer  = true
-        shadowLayer = CAShapeLayer()
-        shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
-        shadowLayer.fillColor = UIColor.white.cgColor
+        shadowLayerShowedCount      += 1
+        hasShadowLayer              = true
+        shadowLayer                 = CAShapeLayer()
+        shadowLayer.path            = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+        shadowLayer.fillColor       = UIColor.white.cgColor
         
-        shadowLayer.shadowColor = UIColor.darkGray.cgColor
-        shadowLayer.shadowPath = shadowLayer.path
-        shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-        shadowLayer.shadowOpacity = 0.8
-        shadowLayer.shadowRadius = 5
+        shadowLayer.shadowColor     = UIColor.darkGray.cgColor
+        shadowLayer.shadowPath      = shadowLayer.path
+        shadowLayer.shadowOffset    = CGSize(width: 2.0, height: 2.0)
+        shadowLayer.shadowOpacity   = 0.8
+        shadowLayer.shadowRadius    = 5
         
         layer.insertSublayer(shadowLayer, at: 0)
         
@@ -94,7 +94,6 @@ class CircleGradientButton: CircleShadowButton {
         
         gradientLayer.cornerRadius = cornerRadius
         layer.insertSublayer(gradientLayer, at: 1)
-        
     }
     
     override func layoutSubviews() {

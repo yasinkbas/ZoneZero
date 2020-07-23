@@ -31,14 +31,14 @@ class RegisterView: AuthView {
     
     @objc
     func didTapAlternateButton(_ sender: ZZButton) {
-        delegate?.registerView(self, didTapAlternateButton: sender, viewModel: getFormViewModel(from: formView))
+        delegate?.registerView(self, didTapAlternateButton: sender, viewModel: composeFormViewModel(from: formView))
     }
     
-    private func getFormViewModel(from actionFormView: ActionFormView) -> Register.FormModel.ViewModel {
-        let name = actionFormView.getTextFieldText(with: "name")
-        let username = actionFormView.getTextFieldText(with: "username")
-        let password = actionFormView.getTextFieldText(with: "password")
-        let repassword = actionFormView.getTextFieldText(with: "re-password")
+    private func composeFormViewModel(from actionFormView: ActionFormView) -> Register.FormModel.ViewModel {
+        let name        = actionFormView.getTextFieldText(with: "name")
+        let username    = actionFormView.getTextFieldText(with: "username")
+        let password    = actionFormView.getTextFieldText(with: "password")
+        let repassword  = actionFormView.getTextFieldText(with: "re-password")
         
         return .init(name: name, username: username, password: password, repassword: repassword)
     }
@@ -74,7 +74,7 @@ extension RegisterView {
 
 extension RegisterView: ActionFormViewDelegate {
     func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZZButton) {
-        delegate?.registerView(self, didTapActionButton: actionButton, viewModel: getFormViewModel(from: formView))
+        delegate?.registerView(self, didTapActionButton: actionButton, viewModel: composeFormViewModel(from: formView))
     }
 }
 

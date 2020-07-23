@@ -16,19 +16,22 @@ final class LoginView: AuthView {
     
     weak var delegate: LoginViewDelegate?
     
-    override var alternateButtonTitle: String { "Do you want to register" }
+    override var alternateButtonTitle: String {
+        "Do you want to register"
+    }
     
-    lazy var remindMeCheckbox           = CheckboxLabel(title: "Remind me").then { remindMeCheckbox in
+    lazy var remindMeCheckbox = CheckboxLabel(title: "Remind me").then { remindMeCheckbox in
         remindMeCheckbox.delegate = self
     }
     
-    lazy var acceptPromotionCheckbox    = CheckboxLabel(title: "I accept to get promotional e-mail from Mobillium about ZoneZero Program.")
-        .then { checkboxLabel in
+    lazy var acceptPromotionCheckbox = CheckboxLabel(
+        title: "I accept to get promotional e-mail from Mobillium about ZoneZero Program."
+    ).then { checkboxLabel in
             checkboxLabel.label.numberOfLines   = 0
             checkboxLabel.label.lineBreakMode   = .byWordWrapping
             checkboxLabel.label.contentMode     = .topLeft
             checkboxLabel.isHidden              = true
-            checkboxLabel.label.font = checkboxLabel.label.font.withSize(14)
+            checkboxLabel.label.font            = checkboxLabel.label.font.withSize(14)
     }
     
     override func initial() {
@@ -55,10 +58,10 @@ final class LoginView: AuthView {
     
     @objc
     func didTapAlternateButton(_ sender: ZZButton) {
-        delegate?.loginView(self, didTapAlternateButton: sender, formModel: getFormViewModel(from: formView))
+        delegate?.loginView(self, didTapAlternateButton: sender, formModel: composeFormViewModel(from: formView))
     }
     
-    private func getFormViewModel(from actionFormView: ActionFormView) -> Login.FormModel.ViewModel {
+    private func composeFormViewModel(from actionFormView: ActionFormView) -> Login.FormModel.ViewModel {
         let username = actionFormView.getTextFieldText(with: "username")
         let password = actionFormView.getTextFieldText(with: "password")
         
@@ -99,7 +102,7 @@ extension LoginView {
 
 extension LoginView: ActionFormViewDelegate {
     func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZZButton) {
-        delegate?.loginView(self, didTapActionButton: actionButton, viewModel: getFormViewModel(from: formView))
+        delegate?.loginView(self, didTapActionButton: actionButton, viewModel: composeFormViewModel(from: formView))
     }
 }
 

@@ -17,8 +17,8 @@ class FormTextFieldItem: UITextField, FormItem {
         placeholder: String = .none,
         isSecured: Bool = false
     ) {
-        self.id = id
-        self.image = image
+        self.id                 = id
+        self.image              = image
         super.init(frame: .zero)
         self.placeholder        = placeholder
         self.isSecureTextEntry  = isSecured
@@ -42,14 +42,14 @@ extension FormTextFieldItem {
     var padding: UIEdgeInsets { UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 5) }
 
       override open func textRect(forBounds bounds: CGRect) -> CGRect {
-          return bounds.inset(by: padding)
+          bounds.inset(by: padding)
       }
 
       override open func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-          return bounds.inset(by: padding)
+          bounds.inset(by: padding)
       }
 
       override open func editingRect(forBounds bounds: CGRect) -> CGRect {
-          return bounds.inset(by: padding)
+          bounds.inset(by: padding)
       }
 }

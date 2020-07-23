@@ -36,7 +36,7 @@ class RegisterView: AuthView {
     
     private func getFormViewModel(from actionFormView: ActionFormView) -> Register.FormModel.ViewModel {
         let name = actionFormView.getTextFieldText(with: "name")
-        let username = actionFormView.getTextFieldText(with: "user")
+        let username = actionFormView.getTextFieldText(with: "username")
         let password = actionFormView.getTextFieldText(with: "password")
         let repassword = actionFormView.getTextFieldText(with: "re-password")
         

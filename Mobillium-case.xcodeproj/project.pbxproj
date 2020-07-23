@@ -22,6 +22,8 @@
 		C21F0B2924C8B95E0070C31E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2824C8B95E0070C31E /* Response.swift */; };
 		C21F0B2C24C8D67E0070C31E /* LoginAuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2B24C8D67E0070C31E /* LoginAuthenticationWorker.swift */; };
 		C21F0B2F24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2E24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift */; };
+		C2A437E424C911D400D45895 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E324C911D400D45895 /* Checkbox.swift */; };
+		C2A437E724C911E400D45895 /* MCCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E624C911E400D45895 /* MCCheckbox.swift */; };
 		C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374C24C7310E001665FA /* AppDelegate.swift */; };
 		C2C8374F24C7310E001665FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374E24C7310E001665FA /* SceneDelegate.swift */; };
 		C2C8375124C7310E001665FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8375024C7310E001665FA /* ViewController.swift */; };
@@ -109,6 +111,8 @@
 		C21F0B2824C8B95E0070C31E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C21F0B2B24C8D67E0070C31E /* LoginAuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationWorker.swift; sourceTree = "<group>"; };
 		C21F0B2E24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthenticationWorker.swift; sourceTree = "<group>"; };
+		C2A437E324C911D400D45895 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		C2A437E624C911E400D45895 /* MCCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCheckbox.swift; sourceTree = "<group>"; };
 		C2C8374924C7310E001665FA /* Mobillium-case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobillium-case.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C8374C24C7310E001665FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2C8374E24C7310E001665FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +230,22 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		C2A437E224C911CB00D45895 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437E324C911D400D45895 /* Checkbox.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		C2A437E524C911DB00D45895 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				C2A437E624C911E400D45895 /* MCCheckbox.swift */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
 		C2C8374024C7310E001665FA = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +359,7 @@
 		C2C8378224C7315F001665FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2A437E224C911CB00D45895 /* Checkbox */,
 				C2C837F424C747FD001665FA /* Form */,
 			);
 			path = View;
@@ -556,6 +577,7 @@
 		C2C837FD24C74D0A001665FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2A437E524C911DB00D45895 /* Checkbox */,
 				C2C837F124C74647001665FA /* Form */,
 			);
 			path = View;
@@ -744,8 +766,10 @@
 				C21F0B2624C89EE00070C31E /* OvalButton.swift in Sources */,
 				C2C8379924C73483001665FA /* MCViewController.swift in Sources */,
 				C2C8378F24C73459001665FA /* MCPresenter.swift in Sources */,
+				C2A437E424C911D400D45895 /* Checkbox.swift in Sources */,
 				C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */,
 				C2C837FA24C748D4001665FA /* CircleButton.swift in Sources */,
+				C2A437E724C911E400D45895 /* MCCheckbox.swift in Sources */,
 				C2C837E824C73F83001665FA /* ConstraintAssociatedKeys.swift in Sources */,
 				C21F0B1424C889B50070C31E /* RegisterPresenter.swift in Sources */,
 				C2C837DD24C73F83001665FA /* LoggerArrayCompatible.swift in Sources */,

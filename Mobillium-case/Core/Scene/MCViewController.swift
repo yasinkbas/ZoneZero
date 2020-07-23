@@ -38,13 +38,13 @@ class MCViewController<View: MCView, Router: MCRouter>: UIViewController {
     func setupListeners() { }
     
     // MARK: - Overrides
-    
     // MARK: View motion process
     
     override func present(
         _ viewControllerToPresent: UIViewController,
         animated flag: Bool,
-        completion: (() -> Void)? = nil) {
+        completion: (() -> Void)? = nil
+    ) {
         viewControllerToPresent.modalPresentationStyle = .fullScreen
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }

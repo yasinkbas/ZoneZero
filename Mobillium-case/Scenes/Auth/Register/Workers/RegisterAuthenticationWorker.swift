@@ -20,10 +20,11 @@ class RegisterAuthenticationWorker: RegisterAuthenticationWorkerLogic {
            name.count > 3,
            username.count > 3,
            password.count > 3,
-           repassword.count > 3,
            password == repassword {
             return SuccessResponse()
         }
+        print(viewModel)
+        
         return ErrorResponse(title: "Incorrect entry", content: "Please check these fields again.")
     }
 }

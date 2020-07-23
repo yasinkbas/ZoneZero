@@ -7,11 +7,11 @@
 
 import UIKit
 
-protocol MCViewPresenter {
+protocol MCRoutable {
     func route() -> UIViewController?
 }
 
-protocol MCBuilder: MCViewPresenter {
+protocol MCBuilder: MCRoutable {
     associatedtype Buildable: MCBuildable
     
     func make() -> Buildable

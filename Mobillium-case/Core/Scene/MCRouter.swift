@@ -8,7 +8,7 @@
 import UIKit
 
 class MCRouter: NSObject {
-    func route(_ viewController: UIViewController?, builder: MCViewPresenter, presentationStyle: PresentationStyle) {
+    func route(_ viewController: UIViewController?, builder: MCRoutable, presentationStyle: PresentationStyle) {
         presentationStyle.start(viewController: viewController, to: builder)
     }
 }
@@ -18,7 +18,7 @@ enum PresentationStyle {
     case toRight
     case toLeft
     
-    func start(viewController: UIViewController?, to builder: MCViewPresenter) {
+    func start(viewController: UIViewController?, to builder: MCRoutable) {
         switch self {
         case .show:
             viewController?.present(builder.route()!, animated: true, completion: nil)

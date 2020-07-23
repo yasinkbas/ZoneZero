@@ -18,6 +18,10 @@ final class LoginView: AuthView {
     
     override var alternateButtonTitle: String { "Do you want to register" }
     
+    lazy var remindMeCheckbox = UIView().then { checkbox in
+        
+    }
+    
     override func initial() {
         super.initial()
         formView = LoginFormView()

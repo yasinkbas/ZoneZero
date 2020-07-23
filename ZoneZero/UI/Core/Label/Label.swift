@@ -1,5 +1,5 @@
 //
-//  ZZLabel.swift
+//  ZoneZeroLabel.swift
 //  Mobillium-case
 //
 //  Created by yasinkbas on 21.07.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZZLabel: UILabel {
+class ZoneZeroLabel: UILabel {
     
     init(
         text: String                    = .none,

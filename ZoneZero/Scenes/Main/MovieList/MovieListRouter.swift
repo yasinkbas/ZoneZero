@@ -15,7 +15,7 @@ protocol MovieListDataPassing {
     var dataStore: MovieListDataStore? { get }
 }
 
-class MovieListRouter: ZZRouter, MovieListRoutingLogic, MovieListDataPassing {
+class MovieListRouter: ZoneZeroRouter, MovieListRoutingLogic, MovieListDataPassing {
     weak var viewController: MovieListViewController?
     var dataStore: MovieListDataStore?
     

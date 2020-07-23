@@ -13,7 +13,7 @@ class FormView: UIView {
     
     var layout = Layout.shared
 
-    var titleLabel: ZZLabel
+    var titleLabel: ZoneZeroLabel
     var items: [FormItemView]
     
     lazy var containerView = UIView().then { view in
@@ -23,7 +23,7 @@ class FormView: UIView {
     
     init(
         _ items: [FormItemView],
-        title: ZZLabel
+        title: ZoneZeroLabel
     ) {
         self.items = items
         self.titleLabel = title

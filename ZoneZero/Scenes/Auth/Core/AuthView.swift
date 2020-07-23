@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AuthView: ZZView {
+class AuthView: ZoneZeroView {
     
     var formView: ActionFormView!
     var alternateButtonTitle: String { .none }
@@ -25,7 +25,7 @@ class AuthView: ZZView {
         imageView.layer.masksToBounds   = true
     }
     
-    lazy var alternateButton = ZZButton(
+    lazy var alternateButton = ZoneZeroButton(
         backgroundColor: .clear,
         title: alternateButtonTitle
     )

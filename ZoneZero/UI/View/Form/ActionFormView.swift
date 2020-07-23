@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ActionFormViewDelegate: class {
-    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZZButton)
+    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZoneZeroButton)
 }
 
 class ActionFormView: FormView {
@@ -46,7 +46,7 @@ class ActionFormView: FormView {
     init(
         actionType: ActionType,
         items: [FormItemView],
-        title: ZZLabel
+        title: ZoneZeroLabel
     ) {
         self.actionType = actionType
         super.init(items, title: title)
@@ -64,7 +64,7 @@ class ActionFormView: FormView {
     }
     
     @objc
-    private func didTapActionButton(_ sender: ZZButton) {
+    private func didTapActionButton(_ sender: ZoneZeroButton) {
         delegate?.actionFormViewDelegate(self, didTapActionButton: sender)
     }
     

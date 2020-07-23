@@ -7,6 +7,6 @@
 
 import UIKit
 
-class ZZWorker {
+class ZoneZeroWorker {
 
 }

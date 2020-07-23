@@ -11,7 +11,7 @@ protocol RegisterDisplayLogic: class {
     func processResponseIfValidated(response: Response)
 }
 
-class RegisterViewController: ZZViewController<RegisterView, RegisterRouter>, RegisterDisplayLogic {
+class RegisterViewController: ZoneZeroViewController<RegisterView, RegisterRouter>, RegisterDisplayLogic {
     
     var interactor: RegisterBusinessLogic?
     
@@ -30,11 +30,11 @@ class RegisterViewController: ZZViewController<RegisterView, RegisterRouter>, Re
 }
 
 extension RegisterViewController: RegisterViewDelegate {
-    func registerView(_ registerView: RegisterView, didTapActionButton actionButton: ZZButton, viewModel: Register.FormModel.ViewModel) {
+    func registerView(_ registerView: RegisterView, didTapActionButton actionButton: ZoneZeroButton, viewModel: Register.FormModel.ViewModel) {
         interactor?.register(viewModel: viewModel)
     }
     
-    func registerView(_ registerView: RegisterView, didTapAlternateButton alternateButton: ZZButton, viewModel: Register.FormModel.ViewModel) {
+    func registerView(_ registerView: RegisterView, didTapAlternateButton alternateButton: ZoneZeroButton, viewModel: Register.FormModel.ViewModel) {
         router?.routeLogin()
     }
 }

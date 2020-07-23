@@ -11,7 +11,7 @@ protocol RegisterPresentationLogic {
     func presentRegisterAccess(response: Response)
 }
 
-class RegisterPresenter: ZZPresenter<RegisterView, RegisterRouter, RegisterViewController>, RegisterPresentationLogic {
+class RegisterPresenter: ZoneZeroPresenter<RegisterView, RegisterRouter, RegisterViewController>, RegisterPresentationLogic {
     
     func presentRegisterAccess(response: Response) {
         viewController?.processResponseIfValidated(response: response)

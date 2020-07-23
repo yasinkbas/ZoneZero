@@ -1,5 +1,5 @@
 //
-//  ZZView.swift
+//  ZoneZeroView.swift
 //  Mobillium-case
 //
 //  Created by yasinkbas on 21.07.2020.
@@ -16,7 +16,7 @@ extension ViewAppearanceModifier {
     func setupListeners() { }
 }
 
-class ZZView: UIView, ViewAppearanceModifier {
+class ZoneZeroView: UIView, ViewAppearanceModifier {
 
     override init(frame: CGRect) {
         super.init(frame: frame)

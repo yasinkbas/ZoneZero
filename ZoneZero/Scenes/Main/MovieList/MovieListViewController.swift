@@ -11,7 +11,7 @@ protocol MovieListDisplayLogic: class {
     
 }
 
-class MovieListViewController : ZZViewController<MovieListView, MovieListRouter>, MovieListDisplayLogic {
+class MovieListViewController : ZoneZeroViewController<MovieListView, MovieListRouter>, MovieListDisplayLogic {
     
     var interactor: MovieListBusinessLogic?
     let cellIdentifier: String = "movieListCell"

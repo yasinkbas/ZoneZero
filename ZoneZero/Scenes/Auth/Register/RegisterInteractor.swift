@@ -14,7 +14,7 @@ protocol RegisterBusinessLogic {
 protocol RegisterDataStore { }
 
 class RegisterInteractor:
-    ZZInteractor<
+    ZoneZeroInteractor<
         RegisterView,
         RegisterRouter,
         RegisterViewController,

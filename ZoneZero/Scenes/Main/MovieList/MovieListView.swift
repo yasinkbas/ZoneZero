@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MovieListView: ZZView, TableViewMixin {
+class MovieListView: ZoneZeroView, TableViewMixin {
     
-    var tableView = ZZTableView(style: .plain, cell: SquareImageTableViewCell.self)
+    var tableView = ZoneZeroTableView(style: .plain, cell: SquareImageTableViewCell.self)
 
     override func configureAppearance() {
         super.configureAppearance()

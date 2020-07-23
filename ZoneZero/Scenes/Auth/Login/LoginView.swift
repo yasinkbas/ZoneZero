@@ -8,8 +8,8 @@
 import UIKit
 
 protocol LoginViewDelegate: class {
-    func loginView(_ loginView: LoginView, didTapActionButton actionButton: ZZButton, viewModel: Login.FormModel.ViewModel)
-    func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: ZZButton, formModel: Login.FormModel.ViewModel)
+    func loginView(_ loginView: LoginView, didTapActionButton actionButton: ZoneZeroButton, viewModel: Login.FormModel.ViewModel)
+    func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: ZoneZeroButton, formModel: Login.FormModel.ViewModel)
 }
 
 final class LoginView: AuthView {
@@ -57,7 +57,7 @@ final class LoginView: AuthView {
     }
     
     @objc
-    func didTapAlternateButton(_ sender: ZZButton) {
+    func didTapAlternateButton(_ sender: ZoneZeroButton) {
         delegate?.loginView(self, didTapAlternateButton: sender, formModel: composeFormViewModel(from: formView))
     }
     
@@ -83,7 +83,7 @@ extension LoginView {
                     FormTextFieldItem(id: "username", image: UIImage(named: "user")!, placeholder: "Username", isSecured: false),
                     FormTextFieldItem(id: "password", image: UIImage(named: "password")!, placeholder: "Password", isSecured: true)
                 ],
-                title: ZZLabel(
+                title: ZoneZeroLabel(
                     text: "Login",
                     textStyle: .title3,
                     color: .white,
@@ -101,13 +101,13 @@ extension LoginView {
 }
 
 extension LoginView: ActionFormViewDelegate {
-    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZZButton) {
+    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZoneZeroButton) {
         delegate?.loginView(self, didTapActionButton: actionButton, viewModel: composeFormViewModel(from: formView))
     }
 }
 
 extension LoginView: CheckboxDelegate {
-    func checkbox(_ checkbox: ZZCheckbox, didTapCheckBox isChecked: Bool) {
+    func checkbox(_ checkbox: ZoneZeroCheckbox, didTapCheckBox isChecked: Bool) {
         acceptPromotionCheckbox.isHidden = !isChecked
     }
 }

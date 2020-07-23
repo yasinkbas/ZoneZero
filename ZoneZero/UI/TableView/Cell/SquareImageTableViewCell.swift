@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SquareImageTableViewCell: ZZTableViewCell {
+class SquareImageTableViewCell: ZoneZeroTableViewCell {
     
     enum CellType {
         case `default`
@@ -45,7 +45,7 @@ class SquareImageTableViewCell: ZZTableViewCell {
         container.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.6152898889)
     }
     
-    private lazy var titleLabel = ZZLabel(
+    private lazy var titleLabel = ZoneZeroLabel(
         text: .none,
         textStyle: .title1,
         color: .white,
@@ -54,7 +54,7 @@ class SquareImageTableViewCell: ZZTableViewCell {
         fontSize: 18
     )
     
-    private lazy var contentLabel = ZZLabel(
+    private lazy var contentLabel = ZoneZeroLabel(
         text: .none,
         textStyle: .body,
         color: .white,

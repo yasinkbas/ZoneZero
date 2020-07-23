@@ -16,7 +16,7 @@ protocol RegisterDataPassing {
     var dataStore: RegisterDataStore? { get }
 }
 
-class RegisterRouter: ZZRouter, RegisterRoutingLogic, RegisterDataPassing {
+class RegisterRouter: ZoneZeroRouter, RegisterRoutingLogic, RegisterDataPassing {
     weak var viewController: RegisterViewController?
     var dataStore: RegisterDataStore?
     

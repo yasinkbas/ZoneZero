@@ -30,13 +30,13 @@
 		C25335C924C9C8960086DB9F /* MovieListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335C124C9C8960086DB9F /* MovieListBuilder.swift */; };
 		C25335CA24C9C8960086DB9F /* MovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335C224C9C8960086DB9F /* MovieListInteractor.swift */; };
 		C25335CB24C9C8960086DB9F /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335C324C9C8960086DB9F /* MovieListView.swift */; };
-		C25335D024C9CBA80086DB9F /* ZZTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335CF24C9CBA80086DB9F /* ZZTableView.swift */; };
+		C25335D024C9CBA80086DB9F /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335CF24C9CBA80086DB9F /* TableView.swift */; };
 		C25335D324C9CDA60086DB9F /* ZZTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335D224C9CDA60086DB9F /* ZZTableViewCell.swift */; };
 		C25335D624C9CE0F0086DB9F /* SquareImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335D524C9CE0F0086DB9F /* SquareImageTableViewCell.swift */; };
-		C2A437E724C911E400D45895 /* ZZCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E624C911E400D45895 /* ZZCheckbox.swift */; };
+		C2A437E724C911E400D45895 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E624C911E400D45895 /* Checkbox.swift */; };
 		C2A437E924C917F400D45895 /* CheckboxLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437E824C917F400D45895 /* CheckboxLabel.swift */; };
 		C2A437EC24C91CD600D45895 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A437EB24C91CD600D45895 /* Optional.swift */; };
-		C2ABAB1B24CA204800C64DEC /* ZZTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABAB1A24CA204800C64DEC /* ZZTableViewDataSource.swift */; };
+		C2ABAB1B24CA204800C64DEC /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABAB1A24CA204800C64DEC /* TableViewDataSource.swift */; };
 		C2ABAB1E24CA22F900C64DEC /* ViewMixins.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ABAB1D24CA22F900C64DEC /* ViewMixins.swift */; };
 		C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374C24C7310E001665FA /* AppDelegate.swift */; };
 		C2C8374F24C7310E001665FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8374E24C7310E001665FA /* SceneDelegate.swift */; };
@@ -44,13 +44,13 @@
 		C2C8375924C7310F001665FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C8375724C7310F001665FA /* LaunchScreen.storyboard */; };
 		C2C8376424C7310F001665FA /* ZoneZeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8376324C7310F001665FA /* ZoneZeroTests.swift */; };
 		C2C8376F24C7310F001665FA /* ZoneZeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8376E24C7310F001665FA /* ZoneZeroUITests.swift */; };
-		C2C8378D24C7344A001665FA /* ZZBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8378C24C7344A001665FA /* ZZBuilder.swift */; };
-		C2C8378F24C73459001665FA /* ZZPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8378E24C73459001665FA /* ZZPresenter.swift */; };
-		C2C8379124C73461001665FA /* ZZWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379024C73461001665FA /* ZZWorker.swift */; };
-		C2C8379324C7346C001665FA /* ZZRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379224C7346C001665FA /* ZZRouter.swift */; };
-		C2C8379724C7347B001665FA /* ZZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379624C7347B001665FA /* ZZView.swift */; };
-		C2C8379924C73483001665FA /* ZZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379824C73483001665FA /* ZZViewController.swift */; };
-		C2C8379B24C7348B001665FA /* ZZInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379A24C7348B001665FA /* ZZInteractor.swift */; };
+		C2C8378D24C7344A001665FA /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8378C24C7344A001665FA /* Builder.swift */; };
+		C2C8378F24C73459001665FA /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8378E24C73459001665FA /* Presenter.swift */; };
+		C2C8379124C73461001665FA /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379024C73461001665FA /* Worker.swift */; };
+		C2C8379324C7346C001665FA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379224C7346C001665FA /* Router.swift */; };
+		C2C8379724C7347B001665FA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379624C7347B001665FA /* View.swift */; };
+		C2C8379924C73483001665FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379824C73483001665FA /* ViewController.swift */; };
+		C2C8379B24C7348B001665FA /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8379A24C7348B001665FA /* Interactor.swift */; };
 		C2C837B724C7367A001665FA /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837AF24C7367A001665FA /* LoginPresenter.swift */; };
 		C2C837B924C7367A001665FA /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B124C7367A001665FA /* LoginRouter.swift */; };
 		C2C837BA24C7367A001665FA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837B224C7367A001665FA /* LoginModels.swift */; };
@@ -76,15 +76,15 @@
 		C2C837E624C73F83001665FA /* ConstraintArrayCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D624C73F83001665FA /* ConstraintArrayCompatible.swift */; };
 		C2C837E724C73F83001665FA /* ConstraintVerboseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D724C73F83001665FA /* ConstraintVerboseName.swift */; };
 		C2C837E824C73F83001665FA /* ConstraintAssociatedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837D824C73F83001665FA /* ConstraintAssociatedKeys.swift */; };
-		C2C837EB24C742CB001665FA /* ZZLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837EA24C742CB001665FA /* ZZLabel.swift */; };
+		C2C837EB24C742CB001665FA /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837EA24C742CB001665FA /* Label.swift */; };
 		C2C837EE24C7431A001665FA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837ED24C7431A001665FA /* String.swift */; };
 		C2C837F024C74569001665FA /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837EF24C74569001665FA /* FormView.swift */; };
 		C2C837F324C74652001665FA /* FormTextFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F224C74652001665FA /* FormTextFieldItem.swift */; };
 		C2C837F624C74837001665FA /* ActionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F524C74837001665FA /* ActionFormView.swift */; };
-		C2C837F824C74873001665FA /* ZZButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F724C74873001665FA /* ZZButton.swift */; };
+		C2C837F824C74873001665FA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F724C74873001665FA /* Button.swift */; };
 		C2C837FA24C748D4001665FA /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C837F924C748D4001665FA /* CircleButton.swift */; };
 		C2C837FC24C74C7B001665FA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C837FB24C74C7B001665FA /* Colors.xcassets */; };
-		C2C8380224C74D26001665FA /* ZZGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8380124C74D26001665FA /* ZZGradientLayer.swift */; };
+		C2C8380224C74D26001665FA /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8380124C74D26001665FA /* GradientLayer.swift */; };
 		C2C8384024C761DF001665FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C8383F24C761DF001665FA /* Images.xcassets */; };
 		C2C8384224C76521001665FA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2C8384124C76521001665FA /* Icons.xcassets */; };
 		C2C8384424C775CB001665FA /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C8384324C775CB001665FA /* UILabel.swift */; };
@@ -131,13 +131,13 @@
 		C25335C124C9C8960086DB9F /* MovieListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListBuilder.swift; sourceTree = "<group>"; };
 		C25335C224C9C8960086DB9F /* MovieListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListInteractor.swift; sourceTree = "<group>"; };
 		C25335C324C9C8960086DB9F /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
-		C25335CF24C9CBA80086DB9F /* ZZTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZTableView.swift; sourceTree = "<group>"; };
+		C25335CF24C9CBA80086DB9F /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		C25335D224C9CDA60086DB9F /* ZZTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZTableViewCell.swift; sourceTree = "<group>"; };
 		C25335D524C9CE0F0086DB9F /* SquareImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareImageTableViewCell.swift; sourceTree = "<group>"; };
-		C2A437E624C911E400D45895 /* ZZCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZCheckbox.swift; sourceTree = "<group>"; };
+		C2A437E624C911E400D45895 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		C2A437E824C917F400D45895 /* CheckboxLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxLabel.swift; sourceTree = "<group>"; };
 		C2A437EB24C91CD600D45895 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		C2ABAB1A24CA204800C64DEC /* ZZTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZTableViewDataSource.swift; sourceTree = "<group>"; };
+		C2ABAB1A24CA204800C64DEC /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		C2ABAB1D24CA22F900C64DEC /* ViewMixins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMixins.swift; sourceTree = "<group>"; };
 		C2C8374924C7310E001665FA /* ZoneZero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoneZero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C8374C24C7310E001665FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,13 +151,13 @@
 		C2C8376A24C7310F001665FA /* ZoneZeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoneZeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C8376E24C7310F001665FA /* ZoneZeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoneZeroUITests.swift; sourceTree = "<group>"; };
 		C2C8377024C7310F001665FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2C8378C24C7344A001665FA /* ZZBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZBuilder.swift; sourceTree = "<group>"; };
-		C2C8378E24C73459001665FA /* ZZPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZPresenter.swift; sourceTree = "<group>"; };
-		C2C8379024C73461001665FA /* ZZWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZWorker.swift; sourceTree = "<group>"; };
-		C2C8379224C7346C001665FA /* ZZRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZRouter.swift; sourceTree = "<group>"; };
-		C2C8379624C7347B001665FA /* ZZView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZView.swift; sourceTree = "<group>"; };
-		C2C8379824C73483001665FA /* ZZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZViewController.swift; sourceTree = "<group>"; };
-		C2C8379A24C7348B001665FA /* ZZInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZInteractor.swift; sourceTree = "<group>"; };
+		C2C8378C24C7344A001665FA /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		C2C8378E24C73459001665FA /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		C2C8379024C73461001665FA /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		C2C8379224C7346C001665FA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C2C8379624C7347B001665FA /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		C2C8379824C73483001665FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2C8379A24C7348B001665FA /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		C2C837AF24C7367A001665FA /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		C2C837B124C7367A001665FA /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		C2C837B224C7367A001665FA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
@@ -183,15 +183,15 @@
 		C2C837D624C73F83001665FA /* ConstraintArrayCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintArrayCompatible.swift; sourceTree = "<group>"; };
 		C2C837D724C73F83001665FA /* ConstraintVerboseName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintVerboseName.swift; sourceTree = "<group>"; };
 		C2C837D824C73F83001665FA /* ConstraintAssociatedKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAssociatedKeys.swift; sourceTree = "<group>"; };
-		C2C837EA24C742CB001665FA /* ZZLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZLabel.swift; sourceTree = "<group>"; };
+		C2C837EA24C742CB001665FA /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		C2C837ED24C7431A001665FA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C2C837EF24C74569001665FA /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		C2C837F224C74652001665FA /* FormTextFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldItem.swift; sourceTree = "<group>"; };
 		C2C837F524C74837001665FA /* ActionFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionFormView.swift; sourceTree = "<group>"; };
-		C2C837F724C74873001665FA /* ZZButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZButton.swift; sourceTree = "<group>"; };
+		C2C837F724C74873001665FA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		C2C837F924C748D4001665FA /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		C2C837FB24C74C7B001665FA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		C2C8380124C74D26001665FA /* ZZGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZGradientLayer.swift; sourceTree = "<group>"; };
+		C2C8380124C74D26001665FA /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		C2C8383F24C761DF001665FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C2C8384124C76521001665FA /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		C2C8384324C775CB001665FA /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -274,8 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				C25335D124C9CD990086DB9F /* Cell */,
-				C25335CF24C9CBA80086DB9F /* ZZTableView.swift */,
-				C2ABAB1A24CA204800C64DEC /* ZZTableViewDataSource.swift */,
+				C25335CF24C9CBA80086DB9F /* TableView.swift */,
+				C2ABAB1A24CA204800C64DEC /* TableViewDataSource.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 		C2A437E524C911DB00D45895 /* Checkbox */ = {
 			isa = PBXGroup;
 			children = (
-				C2A437E624C911E400D45895 /* ZZCheckbox.swift */,
+				C2A437E624C911E400D45895 /* Checkbox.swift */,
 			);
 			path = Checkbox;
 			sourceTree = "<group>";
@@ -480,13 +480,13 @@
 		C2C8378B24C73432001665FA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				C2C8378C24C7344A001665FA /* ZZBuilder.swift */,
-				C2C8379A24C7348B001665FA /* ZZInteractor.swift */,
-				C2C8378E24C73459001665FA /* ZZPresenter.swift */,
-				C2C8379224C7346C001665FA /* ZZRouter.swift */,
-				C2C8379624C7347B001665FA /* ZZView.swift */,
-				C2C8379824C73483001665FA /* ZZViewController.swift */,
-				C2C8379024C73461001665FA /* ZZWorker.swift */,
+				C2C8378C24C7344A001665FA /* Builder.swift */,
+				C2C8379A24C7348B001665FA /* Interactor.swift */,
+				C2C8378E24C73459001665FA /* Presenter.swift */,
+				C2C8379224C7346C001665FA /* Router.swift */,
+				C2C8379624C7347B001665FA /* View.swift */,
+				C2C8379824C73483001665FA /* ViewController.swift */,
+				C2C8379024C73461001665FA /* Worker.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -647,7 +647,7 @@
 		C2C837FE24C74D0E001665FA /* Label */ = {
 			isa = PBXGroup;
 			children = (
-				C2C837EA24C742CB001665FA /* ZZLabel.swift */,
+				C2C837EA24C742CB001665FA /* Label.swift */,
 			);
 			path = Label;
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 		C2C837FF24C74D13001665FA /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				C2C837F724C74873001665FA /* ZZButton.swift */,
+				C2C837F724C74873001665FA /* Button.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -663,7 +663,7 @@
 		C2C8380024C74D1D001665FA /* Layer */ = {
 			isa = PBXGroup;
 			children = (
-				C2C8380124C74D26001665FA /* ZZGradientLayer.swift */,
+				C2C8380124C74D26001665FA /* GradientLayer.swift */,
 			);
 			path = Layer;
 			sourceTree = "<group>";
@@ -825,19 +825,19 @@
 			files = (
 				C2C837B724C7367A001665FA /* LoginPresenter.swift in Sources */,
 				C25335C424C9C8960086DB9F /* MovieListPresenter.swift in Sources */,
-				C2C8379B24C7348B001665FA /* ZZInteractor.swift in Sources */,
+				C2C8379B24C7348B001665FA /* Interactor.swift in Sources */,
 				C2C837E124C73F83001665FA /* ConstraintAttributes.swift in Sources */,
 				C21F0B2924C8B95E0070C31E /* Response.swift in Sources */,
 				C21F0B1F24C88D690070C31E /* AppRouter.swift in Sources */,
 				C25335C524C9C8960086DB9F /* MovieListWorker.swift in Sources */,
-				C2C837EB24C742CB001665FA /* ZZLabel.swift in Sources */,
+				C2C837EB24C742CB001665FA /* Label.swift in Sources */,
 				C25335C624C9C8960086DB9F /* MovieListRouter.swift in Sources */,
 				C21F0B2224C88FCB0070C31E /* AuthView.swift in Sources */,
-				C2C8379324C7346C001665FA /* ZZRouter.swift in Sources */,
+				C2C8379324C7346C001665FA /* Router.swift in Sources */,
 				C2C837BA24C7367A001665FA /* LoginModels.swift in Sources */,
 				C21F0B1B24C889B50070C31E /* RegisterView.swift in Sources */,
 				C2C837DB24C73F83001665FA /* Logger.swift in Sources */,
-				C2C8378D24C7344A001665FA /* ZZBuilder.swift in Sources */,
+				C2C8378D24C7344A001665FA /* Builder.swift in Sources */,
 				C2C837DF24C73F83001665FA /* ConstraintTypealias.swift in Sources */,
 				C2C837C124C736C0001665FA /* Then.swift in Sources */,
 				C2C837E624C73F83001665FA /* ConstraintArrayCompatible.swift in Sources */,
@@ -849,14 +849,14 @@
 				C2C837DC24C73F83001665FA /* LoggerTypes.swift in Sources */,
 				C2C837BD24C7367A001665FA /* LoginInteractor.swift in Sources */,
 				C21F0B2624C89EE00070C31E /* OvalButton.swift in Sources */,
-				C2C8379924C73483001665FA /* ZZViewController.swift in Sources */,
+				C2C8379924C73483001665FA /* ViewController.swift in Sources */,
 				C25335C924C9C8960086DB9F /* MovieListBuilder.swift in Sources */,
 				C25335C824C9C8960086DB9F /* MovieListViewController.swift in Sources */,
-				C2C8378F24C73459001665FA /* ZZPresenter.swift in Sources */,
+				C2C8378F24C73459001665FA /* Presenter.swift in Sources */,
 				C2C8374D24C7310E001665FA /* AppDelegate.swift in Sources */,
 				C2C837FA24C748D4001665FA /* CircleButton.swift in Sources */,
-				C2A437E724C911E400D45895 /* ZZCheckbox.swift in Sources */,
-				C2ABAB1B24CA204800C64DEC /* ZZTableViewDataSource.swift in Sources */,
+				C2A437E724C911E400D45895 /* Checkbox.swift in Sources */,
+				C2ABAB1B24CA204800C64DEC /* TableViewDataSource.swift in Sources */,
 				C25335CA24C9C8960086DB9F /* MovieListInteractor.swift in Sources */,
 				C2C837E824C73F83001665FA /* ConstraintAssociatedKeys.swift in Sources */,
 				C21F0B1424C889B50070C31E /* RegisterPresenter.swift in Sources */,
@@ -882,15 +882,15 @@
 				C21F0B2F24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift in Sources */,
 				C2C837E424C73F83001665FA /* ConstraintActivate.swift in Sources */,
 				C2C837DA24C73F83001665FA /* UILab.swift in Sources */,
-				C25335D024C9CBA80086DB9F /* ZZTableView.swift in Sources */,
+				C25335D024C9CBA80086DB9F /* TableView.swift in Sources */,
 				C2C837F024C74569001665FA /* FormView.swift in Sources */,
 				C25335CB24C9C8960086DB9F /* MovieListView.swift in Sources */,
-				C2C8380224C74D26001665FA /* ZZGradientLayer.swift in Sources */,
-				C2C8379724C7347B001665FA /* ZZView.swift in Sources */,
+				C2C8380224C74D26001665FA /* GradientLayer.swift in Sources */,
+				C2C8379724C7347B001665FA /* View.swift in Sources */,
 				C2C837B924C7367A001665FA /* LoginRouter.swift in Sources */,
 				C2C837BE24C7367A001665FA /* LoginView.swift in Sources */,
-				C2C8379124C73461001665FA /* ZZWorker.swift in Sources */,
-				C2C837F824C74873001665FA /* ZZButton.swift in Sources */,
+				C2C8379124C73461001665FA /* Worker.swift in Sources */,
+				C2C837F824C74873001665FA /* Button.swift in Sources */,
 				C2A437E924C917F400D45895 /* CheckboxLabel.swift in Sources */,
 				C2C837F624C74837001665FA /* ActionFormView.swift in Sources */,
 				C25335C724C9C8960086DB9F /* MovieListModels.swift in Sources */,

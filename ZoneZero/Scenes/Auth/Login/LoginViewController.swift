@@ -11,7 +11,7 @@ protocol LoginDisplayLogic: class {
     func processResponseIfValidated(response: Response)
 }
 
-class LoginViewController : ZZViewController<LoginView, LoginRouter>, LoginDisplayLogic {
+class LoginViewController : ZoneZeroViewController<LoginView, LoginRouter>, LoginDisplayLogic {
     
     var interactor: LoginInteractor?
     
@@ -30,11 +30,11 @@ class LoginViewController : ZZViewController<LoginView, LoginRouter>, LoginDispl
 }
 
 extension LoginViewController: LoginViewDelegate {
-    func loginView(_ loginView: LoginView, didTapActionButton actionButton: ZZButton, viewModel: Login.FormModel.ViewModel) {
+    func loginView(_ loginView: LoginView, didTapActionButton actionButton: ZoneZeroButton, viewModel: Login.FormModel.ViewModel) {
         interactor?.login(viewModel: viewModel)
     }
     
-    func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: ZZButton, formModel: Login.FormModel.ViewModel) {
+    func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: ZoneZeroButton, formModel: Login.FormModel.ViewModel) {
         router?.routeBackRegister()
     }
 }

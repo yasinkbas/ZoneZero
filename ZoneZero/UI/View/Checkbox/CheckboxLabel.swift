@@ -7,10 +7,10 @@
 
 import Foundation
 
-class CheckboxLabel: ZZCheckbox {
+class CheckboxLabel: ZoneZeroCheckbox {
     let title: String
     
-    lazy var label = ZZLabel(
+    lazy var label = ZoneZeroLabel(
         text: title,
         textStyle: .callout,
         color: .white,

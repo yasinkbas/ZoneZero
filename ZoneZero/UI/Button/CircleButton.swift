@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CircleButton: ZZButton {
+class CircleButton: ZoneZeroButton {
     override init(backgroundColor: UIColor, title: String = .none) {
         super.init(backgroundColor: backgroundColor, title: title)
     }
@@ -84,7 +84,7 @@ class CircleGradientButton: CircleShadowButton {
     }
     
     func setupGradientLayer(cornerRadius: CGFloat) {
-        let gradientLayer = ZZGradientLayer(
+        let gradientLayer = ZoneZeroGradientLayer(
             frame: bounds,
             colors: colors,
             locations: [0.0, 1.0],

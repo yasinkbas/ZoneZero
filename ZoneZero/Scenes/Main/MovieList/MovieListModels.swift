@@ -17,9 +17,9 @@ enum MovieList {
     }
 }
 
-extension ZZTableViewDataSource where Model == MovieList.Movie.ViewModel {
-    static func make(for movies: [MovieList.Movie.ViewModel], reuseIdentifier: String = "movie") -> ZZTableViewDataSource {
-        ZZTableViewDataSource(
+extension ZoneZeroTableViewDataSource where Model == MovieList.Movie.ViewModel {
+    static func make(for movies: [MovieList.Movie.ViewModel], reuseIdentifier: String = "movie") -> ZoneZeroTableViewDataSource {
+        ZoneZeroTableViewDataSource(
             models: movies,
             reuseIdentifier: reuseIdentifier
         ) { movie, cell in

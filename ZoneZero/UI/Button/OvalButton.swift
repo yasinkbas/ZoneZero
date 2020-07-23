@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OvalButton: ZZButton {
+class OvalButton: ZoneZeroButton {
     let cornerRadius: CGFloat
     let titleFontSize: CGFloat
     

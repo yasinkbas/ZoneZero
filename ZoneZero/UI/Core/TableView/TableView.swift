@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZZTableView<Cell: UITableViewCell>: UITableView, ViewAppearanceModifier {
+class ZoneZeroTableView<Cell: UITableViewCell>: UITableView, ViewAppearanceModifier {
     
     let cell: Cell.Type
     

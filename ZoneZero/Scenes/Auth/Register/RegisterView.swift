@@ -8,8 +8,8 @@
 import UIKit
 
 protocol RegisterViewDelegate: class {
-    func registerView(_ registerView: RegisterView, didTapActionButton actionButton: ZZButton, viewModel: Register.FormModel.ViewModel)
-    func registerView(_ registerView: RegisterView, didTapAlternateButton alternateButton: ZZButton, viewModel: Register.FormModel.ViewModel)
+    func registerView(_ registerView: RegisterView, didTapActionButton actionButton: ZoneZeroButton, viewModel: Register.FormModel.ViewModel)
+    func registerView(_ registerView: RegisterView, didTapAlternateButton alternateButton: ZoneZeroButton, viewModel: Register.FormModel.ViewModel)
 }
 
 class RegisterView: AuthView {
@@ -30,7 +30,7 @@ class RegisterView: AuthView {
     }
     
     @objc
-    func didTapAlternateButton(_ sender: ZZButton) {
+    func didTapAlternateButton(_ sender: ZoneZeroButton) {
         delegate?.registerView(self, didTapAlternateButton: sender, viewModel: composeFormViewModel(from: formView))
     }
     
@@ -55,7 +55,7 @@ extension RegisterView {
                     FormTextFieldItem(id: "password", image: UIImage(named: "password")!, placeholder: "Password", isSecured: true),
                     FormTextFieldItem(id: "re-password", image: UIImage(named: "password")!, placeholder: "ReType Password", isSecured: true)
                 ],
-                title: ZZLabel(
+                title: ZoneZeroLabel(
                     text: "Register",
                     textStyle: .title3,
                     color: .white,
@@ -73,7 +73,7 @@ extension RegisterView {
 }
 
 extension RegisterView: ActionFormViewDelegate {
-    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZZButton) {
+    func actionFormViewDelegate(_ actionFormView: ActionFormView, didTapActionButton actionButton: ZoneZeroButton) {
         delegate?.registerView(self, didTapActionButton: actionButton, viewModel: composeFormViewModel(from: formView))
     }
 }

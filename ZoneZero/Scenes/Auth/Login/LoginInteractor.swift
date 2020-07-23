@@ -13,7 +13,7 @@ protocol LoginBusinessLogic {
 
 protocol LoginDataStore { }
 
-class LoginInteractor: ZZInteractor<LoginView, LoginRouter, LoginViewController, LoginPresenter>, LoginBusinessLogic, LoginDataStore {
+class LoginInteractor: ZoneZeroInteractor<LoginView, LoginRouter, LoginViewController, LoginPresenter>, LoginBusinessLogic, LoginDataStore {
     
     var authenticationWorker: LoginAuthenticationWorker
     

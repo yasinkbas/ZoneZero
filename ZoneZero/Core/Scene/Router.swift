@@ -1,5 +1,5 @@
 //
-//  ZZRouter.swift
+//  ZoneZeroRouter.swift
 //  Mobillium-case
 //
 //  Created by yasinkbas on 21.07.2020.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ZZRouter: NSObject {
-    func route(_ viewController: UIViewController?, builder: ZZRoutable, presentationStyle: PresentationStyle) {
+class ZoneZeroRouter: NSObject {
+    func route(_ viewController: UIViewController?, builder: ZoneZeroRoutable, presentationStyle: PresentationStyle) {
         presentationStyle.start(viewController: viewController, to: builder)
     }
 }
@@ -18,7 +18,7 @@ enum PresentationStyle {
     case toRight
     case toLeft
     
-    func start(viewController: UIViewController?, to builder: ZZRoutable) {
+    func start(viewController: UIViewController?, to builder: ZoneZeroRoutable) {
         switch self {
         case .show:
             viewController?.present(builder.route()!, animated: true, completion: nil)

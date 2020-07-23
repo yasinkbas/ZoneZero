@@ -11,7 +11,7 @@ protocol LoginPresentationLogic {
     func presentLoginAccess(response: Response)
 }
 
-class LoginPresenter: ZZPresenter<LoginView, LoginRouter, LoginViewController>, LoginPresentationLogic {
+class LoginPresenter: ZoneZeroPresenter<LoginView, LoginRouter, LoginViewController>, LoginPresentationLogic {
     
     func presentLoginAccess(response: Response) {
         viewController?.processResponseIfValidated(response: response)

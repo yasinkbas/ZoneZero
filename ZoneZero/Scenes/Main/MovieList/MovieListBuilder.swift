@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieListBuilder: ZZBuilder {
+class MovieListBuilder: ZoneZeroBuilder {
     func setup() -> MovieListViewController {
         let view = MovieListView()
         let viewController = MovieListViewController(view: view)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZZTableViewCell: UITableViewCell, ViewAppearanceModifier {
+class ZoneZeroTableViewCell: UITableViewCell, ViewAppearanceModifier {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -1,5 +1,5 @@
 //
-//  ZZCheckbox.swift
+//  ZoneZeroCheckbox.swift
 //  Mobillium-case
 //
 //  Created by yasinkbas on 23.07.2020.
@@ -8,10 +8,10 @@
 import UIKit
 
 protocol CheckboxDelegate: class {
-    func checkbox(_ checkbox: ZZCheckbox, didTapCheckBox isChecked: Bool)
+    func checkbox(_ checkbox: ZoneZeroCheckbox, didTapCheckBox isChecked: Bool)
 }
 
-class ZZCheckbox: UIView {
+class ZoneZeroCheckbox: UIView {
     
     weak var delegate: CheckboxDelegate?
     

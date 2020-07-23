@@ -1,5 +1,5 @@
 //
-//  ZZViewController.swift
+//  ZoneZeroViewController.swift
 //  Mobillium-case
 //
 //  Created by yasinkbas on 21.07.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZZViewController<View: ZZView, Router: ZZRouter>: UIViewController {
+class ZoneZeroViewController<View: ZoneZeroView, Router: ZoneZeroRouter>: UIViewController {
     var v: View? { view as? View }
     
     var router: Router?
@@ -50,7 +50,7 @@ class ZZViewController<View: ZZView, Router: ZZRouter>: UIViewController {
 }
 
 // MARK: - Alert
-extension ZZViewController {
+extension ZoneZeroViewController {
         enum AlertActionType {
             typealias Handler = ((UIAlertAction) -> ())
             case ok(Handler? = nil)

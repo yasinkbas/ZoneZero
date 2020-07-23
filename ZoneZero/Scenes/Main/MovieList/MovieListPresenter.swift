@@ -11,7 +11,7 @@ protocol MovieListPresentationLogic {
     
 }
 
-class MovieListPresenter: ZZPresenter<MovieListView, MovieListRouter, MovieListViewController>, MovieListPresentationLogic {
+class MovieListPresenter: ZoneZeroPresenter<MovieListView, MovieListRouter, MovieListViewController>, MovieListPresentationLogic {
     
 
 }

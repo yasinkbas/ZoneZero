@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterBuilder: ZZBuilder {
+class RegisterBuilder: ZoneZeroBuilder {
     func setup() -> RegisterViewController {
         let view = RegisterView()
         let viewController = RegisterViewController(view: view)

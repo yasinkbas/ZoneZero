@@ -16,7 +16,7 @@ protocol LoginDataPassing {
     var dataStore: LoginDataStore? { get }
 }
 
-class LoginRouter: ZZRouter, LoginRoutingLogic, LoginDataPassing {
+class LoginRouter: ZoneZeroRouter, LoginRoutingLogic, LoginDataPassing {
     weak var viewController: LoginViewController?
     var dataStore: LoginDataStore?
     

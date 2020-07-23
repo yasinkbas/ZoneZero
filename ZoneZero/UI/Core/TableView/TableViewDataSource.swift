@@ -8,7 +8,7 @@
 import UIKit
 
 ///<reference>:  https://www.swiftbysundell.com/articles/reusable-data-sources-in-swift/
-class ZZTableViewDataSource<Model>: NSObject, UITableViewDataSource {
+class ZoneZeroTableViewDataSource<Model>: NSObject, UITableViewDataSource {
     typealias CellConfigurator = (Model, UITableViewCell) -> Void
     
     var models: [Model]

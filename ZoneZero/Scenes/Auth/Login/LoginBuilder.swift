@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginBuilder: ZZBuilder {    
+class LoginBuilder: ZoneZeroBuilder {    
     
     func setup() -> LoginViewController {
         let view            = LoginView()

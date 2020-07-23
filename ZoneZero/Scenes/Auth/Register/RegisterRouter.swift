@@ -8,7 +8,6 @@
 import UIKit
 
 @objc protocol RegisterRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
     func routeLogin()
     func routeMovieList()
 }

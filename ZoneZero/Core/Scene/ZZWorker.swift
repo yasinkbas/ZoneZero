@@ -1,5 +1,5 @@
 //
-//  ZZWorker.swift
+//  Worker.swift
 //  Mobillium-case
 //
 //  Created by yasinkbas on 21.07.2020.

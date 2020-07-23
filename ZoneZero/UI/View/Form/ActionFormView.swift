@@ -33,8 +33,8 @@ class ActionFormView: FormView {
         
         private var content: (colors: [UIColor], symbol: String) {
             switch self {
-            case .default:  return ([UIColor(named: "primaryForZZolor-regular")!, UIColor(named: "primaryForZZolor-light")!], "✓")
-            case .go:       return ([UIColor(named: "primaryForZZolor-regular")!, UIColor(named: "primaryForZZolor-light")!], "→")
+            case .default:  return ([UIColor(named: "primaryColor-regular")!, UIColor(named: "primaryColor-light")!], "✓")
+            case .go:       return ([UIColor(named: "primaryColor-regular")!, UIColor(named: "primaryColor-light")!], "→")
             }
         }
     }

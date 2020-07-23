@@ -13,12 +13,18 @@ protocol RegisterBusinessLogic {
 
 protocol RegisterDataStore { }
 
-class RegisterInteractor: RegisterBusinessLogic, RegisterDataStore {
-    var presenter: RegisterPresentationLogic?
+class RegisterInteractor:
+    ZZInteractor<
+        RegisterView,
+        RegisterRouter,
+        RegisterViewController,
+        RegisterPresenter
+    >, RegisterBusinessLogic, RegisterDataStore {
     var authenticationWorker: RegisterAuthenticationWorkerLogic
     
-    init() {
+    override init() {
         authenticationWorker = RegisterAuthenticationWorker()
+        super.init()
     }
     
     func register(viewModel: Register.FormModel.ViewModel) {

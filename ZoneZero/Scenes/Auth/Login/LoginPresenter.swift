@@ -12,7 +12,6 @@ protocol LoginPresentationLogic {
 }
 
 class LoginPresenter: ZZPresenter<LoginView, LoginRouter, LoginViewController>, LoginPresentationLogic {
-    weak var viewController: LoginDisplayLogic?
     
     func presentLoginAccess(response: Response) {
         viewController?.processResponseIfValidated(response: response)

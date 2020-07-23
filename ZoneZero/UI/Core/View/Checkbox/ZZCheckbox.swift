@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol ZZCheckboxDelegate: class {
+protocol CheckboxDelegate: class {
     func checkbox(_ checkbox: ZZCheckbox, didTapCheckBox isChecked: Bool)
 }
 
 class ZZCheckbox: UIView {
     
-    weak var delegate: ZZCheckboxDelegate?
+    weak var delegate: CheckboxDelegate?
     
     let _width: CGFloat         = 20
     let _height: CGFloat        = 20
@@ -68,6 +68,6 @@ class ZZCheckbox: UIView {
     }
     
     func customizeAppearance() {
-        // the content might be held at subclass
+        // the content will be filled in subclasses
     }
 }

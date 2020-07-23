@@ -13,13 +13,13 @@ protocol LoginBusinessLogic {
 
 protocol LoginDataStore { }
 
-class LoginInteractor: LoginBusinessLogic, LoginDataStore {
+class LoginInteractor: ZZInteractor<LoginView, LoginRouter, LoginViewController, LoginPresenter>, LoginBusinessLogic, LoginDataStore {
     
-    var presenter: LoginPresentationLogic?
     var authenticationWorker: LoginAuthenticationWorker
     
-    init() {
+    override init() {
         authenticationWorker = LoginAuthenticationWorker()
+        super.init()
     }
 
     func login(viewModel: Login.FormModel.ViewModel) {

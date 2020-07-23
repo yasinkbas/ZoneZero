@@ -106,7 +106,7 @@ extension LoginView: ActionFormViewDelegate {
     }
 }
 
-extension LoginView: ZZCheckboxDelegate {
+extension LoginView: CheckboxDelegate {
     func checkbox(_ checkbox: ZZCheckbox, didTapCheckBox isChecked: Bool) {
         acceptPromotionCheckbox.isHidden = !isChecked
     }

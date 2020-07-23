@@ -10,10 +10,7 @@ import UIKit
 class ZZPresenter<
     View: ZZView,
     Router: ZZRouter,
-    ViewController: ZZViewController<
-        View,
-        Router
-    >
+    ViewController: ZZViewController<View, Router>
 > {
-    
+    weak var viewController: ViewController?
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class RegisterBuilder: ZZBuilder {
-    func make() -> RegisterViewController {
+    func setup() -> RegisterViewController {
         let view = RegisterView()
         let viewController = RegisterViewController(view: view)
         let interactor = RegisterInteractor()

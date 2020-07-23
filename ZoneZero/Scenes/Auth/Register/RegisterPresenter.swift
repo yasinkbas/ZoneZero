@@ -12,7 +12,6 @@ protocol RegisterPresentationLogic {
 }
 
 class RegisterPresenter: ZZPresenter<RegisterView, RegisterRouter, RegisterViewController>, RegisterPresentationLogic {
-    weak var viewController: RegisterDisplayLogic?
     
     func presentRegisterAccess(response: Response) {
         viewController?.processResponseIfValidated(response: response)

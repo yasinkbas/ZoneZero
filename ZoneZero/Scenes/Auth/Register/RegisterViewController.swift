@@ -11,7 +11,7 @@ protocol RegisterDisplayLogic: class {
     func processResponseIfValidated(response: Response)
 }
 
-class RegisterViewController:ZZViewController<RegisterView, RegisterRouter>, RegisterDisplayLogic {
+class RegisterViewController: ZZViewController<RegisterView, RegisterRouter>, RegisterDisplayLogic {
     
     var interactor: RegisterBusinessLogic?
     

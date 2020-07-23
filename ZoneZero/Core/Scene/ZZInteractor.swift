@@ -10,6 +10,8 @@ import UIKit
 class ZZInteractor<
     View: ZZView,
     Router: ZZRouter,
-    ViewController: ZZViewController<View, Router>, Presenter: ZZPresenter<View, Router, ViewController>> {
+    ViewController: ZZViewController<View, Router>,
+    Presenter: ZZPresenter<View, Router, ViewController>> {
 
+    var presenter: Presenter?
 }

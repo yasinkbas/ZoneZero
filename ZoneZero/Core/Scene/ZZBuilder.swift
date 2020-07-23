@@ -14,11 +14,11 @@ protocol ZZRoutable {
 protocol ZZBuilder: ZZRoutable {
     associatedtype Buildable: ZZBuildable
     
-    func make() -> Buildable
+    func setup() -> Buildable
 }
 
 extension ZZBuilder {
-    func route() -> UIViewController? { make() as? UIViewController }
+    func route() -> UIViewController? { setup() as? UIViewController }
 }
 
 protocol ZZBuildable { }

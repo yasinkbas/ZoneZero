@@ -9,7 +9,7 @@ import UIKit
 
 class LoginBuilder: ZZBuilder {    
     
-    func make() -> LoginViewController {
+    func setup() -> LoginViewController {
         let view            = LoginView()
         let viewController  = LoginViewController(view: view)
         let interactor      = LoginInteractor()

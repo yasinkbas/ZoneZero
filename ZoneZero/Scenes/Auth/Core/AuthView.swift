@@ -18,7 +18,7 @@ class AuthView: ZZView {
     }
     
     lazy var logoView = UIImageView().then { imageView in
-        imageView.image                 = UIImage(named: "logo1")
+        imageView.image                 = UIImage(named: "logo")
         imageView.contentMode           = .scaleToFill
         imageView.clipsToBounds         = true
         imageView.layer.cornerRadius    = 32
@@ -47,6 +47,6 @@ class AuthView: ZZView {
     }
     
     func initial() {
-        // the content will be held at subclass
+        // the content will be filled in subclasses
     }
 }

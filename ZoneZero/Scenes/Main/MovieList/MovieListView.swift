@@ -40,7 +40,7 @@ class MovieListView: ZoneZeroView, TableViewMixin {
         tableView.equalToSuper()
         
         addSubview(goLogoutButton)
-        goLogoutButton.set(.centerXOf(self), .bottomOf(self, 12), .width(80), .height(80))
+        goLogoutButton.set(.centerXOf(self), .bottomOf(self, 12), .widthMultiple(self.height, 0.08), .heightMultiple(self.height, 0.08))
         
         addSubview(usernameLabel)
         usernameLabel.set(.centerYOf(goLogoutButton), .rightOf(self, 16), .heightMultiple(goLogoutButton.height, 0.7), .width(usernameLabel.intrinsicContentSize.width))

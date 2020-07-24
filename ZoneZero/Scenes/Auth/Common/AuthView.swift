@@ -18,7 +18,7 @@ class AuthView: ZoneZeroView {
     }
     
     lazy var logoView = UIImageView().then { imageView in
-        imageView.image                 = UIImage(named: "logo")
+        imageView.image                 = UIImage(named: "zonezero-logo")
         imageView.contentMode           = .scaleToFill
         imageView.clipsToBounds         = true
         imageView.layer.cornerRadius    = 32

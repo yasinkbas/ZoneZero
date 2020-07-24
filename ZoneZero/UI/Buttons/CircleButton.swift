@@ -17,6 +17,7 @@ class CircleButton: ZoneZeroButton {
     }
 }
 
+
 class CircleShadowButton: CircleButton {
     
     var shadowLayer: CAShapeLayer!
@@ -58,6 +59,7 @@ class CircleShadowButton: CircleButton {
     }
     
 }
+
 
 class CircleGradientButton: CircleShadowButton {
     

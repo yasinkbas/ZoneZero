@@ -34,6 +34,21 @@ class RegisterView: AuthView {
         delegate?.registerView(self, didTapAlternateButton: sender, viewModel: composeFormViewModel(from: formView))
     }
     
+    func resetForm() {
+        
+        guard let nameTextField = formView.getTextField(with: "name") as? FormTextFieldItem,
+              let usernameTextField = formView.getTextField(with: "username") as? FormTextFieldItem,
+              let passwordTextField = formView.getTextField(with: "password") as? FormTextFieldItem,
+              let repasswordTextField = formView.getTextField(with: "re-password") as? FormTextFieldItem else {
+                return
+        }
+        
+        nameTextField.reset()
+        usernameTextField.reset()
+        passwordTextField.reset()
+        repasswordTextField.reset()
+    }
+    
     private func composeFormViewModel(from actionFormView: ActionFormView) -> Register.FormModel.ViewModel {
         let name        = actionFormView.getTextFieldText(with: "name")
         let username    = actionFormView.getTextFieldText(with: "username")

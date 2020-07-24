@@ -7,21 +7,26 @@
 
 import UIKit
 
+struct MovieListViewRequest: ZoneZeroViewRequest {
+    let username: String
+}
+
 class MovieListBuilder: ZoneZeroBuilder {
-    func setup() -> MovieListViewController {
-        let view = MovieListView()
-        let viewController = MovieListViewController(view: view)
-        let interactor = MovieListInteractor()
-        let presenter = MovieListPresenter()
-        let router = MovieListRouter()
+    func setup(with request: MovieListViewRequest) -> UINavigationController {
+        let view            = MovieListView()
+        let viewController  = MovieListViewController(view: view, username: request.username)
+        let interactor      = MovieListInteractor()
+        let presenter       = MovieListPresenter()
+        let router          = MovieListRouter()
         viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        router.dataStore = interactor
+        viewController.router       = router
+        interactor.presenter        = presenter
+        presenter.viewController    = viewController
+        router.viewController       = viewController
+        viewController.setup()
         
-        return viewController
+        let navigationController = UINavigationController(rootViewController: viewController)
+        return navigationController
     }
 }
 

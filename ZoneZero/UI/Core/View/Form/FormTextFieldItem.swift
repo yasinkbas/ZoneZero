@@ -36,6 +36,10 @@ class FormTextFieldItem: UITextField, FormItem {
         customizedImage.withTintColor(.darkGray)
         leftView = UIImageView(image: customizedImage)
     }
+    
+    func reset() {
+        text = ""
+    }
 }
 
 extension FormTextFieldItem {

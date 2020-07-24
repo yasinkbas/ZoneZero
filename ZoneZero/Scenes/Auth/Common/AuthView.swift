@@ -13,7 +13,7 @@ class AuthView: ZoneZeroView {
     var alternateButtonTitle: String { .none }
     
     lazy var backgroundImageView = UIImageView().then { imageView in
-        imageView.image         = UIImage(named: "background")
+        imageView.image         = UIImage(named: "auth-background2")
         imageView.contentMode   = .scaleAspectFill
     }
     
@@ -31,19 +31,39 @@ class AuthView: ZoneZeroView {
     )
     
     override func configureAppearance() {
+        super.configureAppearance()
+        backgroundColor = .systemPink
         initial()
+    }
+    
+    override func setupLayout() {
+        super.setupLayout()
         addSubview(backgroundImageView)
         backgroundImageView.equalToSuper()
         
         addSubview(logoView)
-        logoView.set(.topOf(self, 64), .centerXOf(self), .widthMultiple(self.width, 0.5), .heightMultiple(self.width, 0.25))
+        logoView.set(
+            .topOf(self, 64),
+            .centerXOf(self),
+            .widthMultiple(self.width, 0.5),
+            .heightMultiple(self.width, 0.25)
+        )
         
         addSubview(formView)
         let formViewSuggestedSize = formView.suggestedSize(self)
-        formView.set(.center(self), .widthOf(self, formViewSuggestedSize.width), .height(formViewSuggestedSize.height))
+        formView.set(
+            .center(self),
+            .height(formViewSuggestedSize.height),
+            .widthOf(self, formViewSuggestedSize.width)
+        )
         
         addSubview(alternateButton)
-        alternateButton.set(.top(formView.bottom, 16), .centerXOf(formView), .widthMultiple(formView.width, 0.9), .height(50))
+        alternateButton.set(
+            .height(50),
+            .centerXOf(formView),
+            .top(formView.bottom, 16),
+            .widthMultiple(formView.width, 0.9)
+        )
     }
     
     func initial() {

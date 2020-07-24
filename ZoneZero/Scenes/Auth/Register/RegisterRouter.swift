@@ -7,26 +7,19 @@
 
 import UIKit
 
-@objc protocol RegisterRoutingLogic {
-    func routeLogin()
-    func routeMovieList()
+protocol RegisterRoutingLogic {
+    func navigateLogin()
+    func navigateMovieList(with request: MovieListViewRequest)
 }
 
-protocol RegisterDataPassing {
-    var dataStore: RegisterDataStore? { get }
-}
-
-class RegisterRouter: ZoneZeroRouter, RegisterRoutingLogic, RegisterDataPassing {
+class RegisterRouter: ZoneZeroRouter, RegisterRoutingLogic {
     weak var viewController: RegisterViewController?
-    var dataStore: RegisterDataStore?
     
-    // MARK: Routing
-    
-    func routeLogin() {
-        route(viewController, builder: LoginBuilder(), presentationStyle: .toLeft)
+    func navigateLogin() {
+        route(viewController, to: LoginBuilder().setup(with: .init()), presentationStyle: .toLeft)
     }
     
-    func routeMovieList() {
-        // TODO: route movielist scene
+    func navigateMovieList(with request: MovieListViewRequest) {
+        route(viewController, to: MovieListBuilder().setup(with: request), presentationStyle: .show)
     }
 }

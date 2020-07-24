@@ -8,7 +8,7 @@
 import UIKit
 
 class RegisterBuilder: ZoneZeroBuilder {
-    func setup() -> RegisterViewController {
+    func setup(with request: EmptyViewRequest) -> RegisterViewController {
         let view = RegisterView()
         let viewController = RegisterViewController(view: view)
         let interactor = RegisterInteractor()
@@ -19,7 +19,7 @@ class RegisterBuilder: ZoneZeroBuilder {
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
-        router.dataStore = interactor
+        viewController.setup()
         
         return viewController
     }

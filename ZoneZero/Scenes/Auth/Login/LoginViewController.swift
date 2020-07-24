@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginDisplayLogic: class {
-    func processResponseIfValidated(response: Response)
+    func processResponseIfValidated(response: Response, viewRequest: MovieListViewRequest)
 }
 
 class LoginViewController : ZoneZeroViewController<LoginView, LoginRouter>, LoginDisplayLogic {
@@ -20,11 +20,16 @@ class LoginViewController : ZoneZeroViewController<LoginView, LoginRouter>, Logi
         v?.delegate = self
     }
     
-    func processResponseIfValidated(response: Response) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        v?.resetForm()
+    }
+    
+    func processResponseIfValidated(response: Response, viewRequest: MovieListViewRequest) {
         if let response = response as? ErrorResponse {
             showAlert(title: response.title, message: response.content, actions: [.ok(nil)])
         } else if let _ = response as? SuccessResponse {
-            router?.routeMovieList()
+            router?.navigateMovieList(with: viewRequest)
         }
     }
 }
@@ -35,6 +40,6 @@ extension LoginViewController: LoginViewDelegate {
     }
     
     func loginView(_ loginView: LoginView, didTapAlternateButton alternateButton: ZoneZeroButton, formModel: Login.FormModel.ViewModel) {
-        router?.routeBackRegister()
+        router?.navigateRegister()
     }
 }

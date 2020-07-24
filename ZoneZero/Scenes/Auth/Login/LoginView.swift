@@ -47,18 +47,42 @@ final class LoginView: AuthView {
     
     override func configureAppearance() {
         super.configureAppearance()
+    }
+    
+    override func setupLayout() {
+        super.setupLayout()
         
         addSubview(remindMeCheckbox)
         let remindMeCheckboxWidth = remindMeCheckbox.label.intrinsicContentSize.width + 20
-        remindMeCheckbox.set(.top(alternateButton.bottom, 8), .leadingOf(formView, 8), .width(remindMeCheckboxWidth), .height(remindMeCheckbox._height))
+        remindMeCheckbox.set(
+            .top(alternateButton.bottom, 8),
+            .leadingOf(formView, 8),
+            .width(remindMeCheckboxWidth),
+            .height(remindMeCheckbox._height)
+        )
         
         addSubview(acceptPromotionCheckbox)
-        acceptPromotionCheckbox.set(.top(remindMeCheckbox.bottom, 6), .leadingOf(remindMeCheckbox), .trailingOf(formView, -8), .height(50))
+        acceptPromotionCheckbox.set(
+            .top(remindMeCheckbox.bottom, 6),
+            .leadingOf(remindMeCheckbox),
+            .trailingOf(formView, -8),
+            .height(50)
+        )
     }
     
     @objc
     func didTapAlternateButton(_ sender: ZoneZeroButton) {
         delegate?.loginView(self, didTapAlternateButton: sender, formModel: composeFormViewModel(from: formView))
+    }
+    
+    func resetForm() {
+        guard let usernameTextField = formView.getTextField(with: "username") as? FormTextFieldItem,
+              let passwordTextField = formView.getTextField(with: "password") as? FormTextFieldItem else {
+                return
+        }
+        
+        usernameTextField.reset()
+        passwordTextField.reset()
     }
     
     private func composeFormViewModel(from actionFormView: ActionFormView) -> Login.FormModel.ViewModel {

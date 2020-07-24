@@ -11,7 +11,7 @@ class ZoneZeroInteractor<
     View: ZoneZeroView,
     Router: ZoneZeroRouter,
     ViewController: ZoneZeroViewController<View, Router>,
-    Presenter: ZoneZeroPresenter<View, Router, ViewController>> {
-
+    Presenter: ZoneZeroPresenter<View, Router, ViewController>
+> {
     var presenter: Presenter?
 }

@@ -70,12 +70,16 @@ class FormView: UIView {
         return items[index]
     }
     
-    func getTextFieldText(with id: String) -> String? {
+    func getTextField(with id: String) -> UITextField? {
         if let item = getItem(with: id), let textField = item as? UITextField {
-            return textField.text
+            return textField
         }
         
         return nil
+    }
+    
+    func getTextFieldText(with id: String) -> String? {
+        getTextField(with: id)?.text
     }
 }
 

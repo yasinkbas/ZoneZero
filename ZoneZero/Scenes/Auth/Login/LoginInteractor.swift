@@ -13,7 +13,13 @@ protocol LoginBusinessLogic {
 
 protocol LoginDataStore { }
 
-class LoginInteractor: ZoneZeroInteractor<LoginView, LoginRouter, LoginViewController, LoginPresenter>, LoginBusinessLogic, LoginDataStore {
+class LoginInteractor:
+    ZoneZeroInteractor<
+        LoginView,
+        LoginRouter,
+        LoginViewController,
+        LoginPresenter
+    >, LoginBusinessLogic, LoginDataStore {
     
     var authenticationWorker: LoginAuthenticationWorker
     
@@ -21,10 +27,14 @@ class LoginInteractor: ZoneZeroInteractor<LoginView, LoginRouter, LoginViewContr
         authenticationWorker = LoginAuthenticationWorker()
         super.init()
     }
-
+    
     func login(viewModel: Login.FormModel.ViewModel) {
         let response = authenticationWorker.authenticate(viewModel: viewModel)
-        
-        presenter?.presentLoginAccess(response: response)
+        presenter?.presentLoginAccess(
+            response: response,
+            viewRequest: .init(
+                username: viewModel.username ?? .none
+            )
+        )
     }
 }

@@ -7,20 +7,10 @@
 
 import UIKit
 
-protocol ZoneZeroRoutable {
-    func route() -> UIViewController?
-}
-
 protocol ZoneZeroBuilder: ZoneZeroRoutable {
     associatedtype Buildable: ZoneZeroBuildable
+    associatedtype Request: ZoneZeroViewRequest
     
-    func setup() -> Buildable
+    func setup(with request: Request) -> Buildable
 }
 
-extension ZoneZeroBuilder {
-    func route() -> UIViewController? { setup() as? UIViewController }
-}
-
-protocol ZoneZeroBuildable { }
-
-extension UIViewController: ZoneZeroBuildable { }

@@ -8,12 +8,12 @@
 import UIKit
 
 protocol LoginPresentationLogic {
-    func presentLoginAccess(response: Response)
+    func presentLoginAccess(response: Response, viewRequest: MovieListViewRequest)
 }
 
 class LoginPresenter: ZoneZeroPresenter<LoginView, LoginRouter, LoginViewController>, LoginPresentationLogic {
     
-    func presentLoginAccess(response: Response) {
-        viewController?.processResponseIfValidated(response: response)
+    func presentLoginAccess(response: Response, viewRequest: MovieListViewRequest) {
+        viewController?.processResponseIfValidated(response: response, viewRequest: viewRequest)
     }
 }

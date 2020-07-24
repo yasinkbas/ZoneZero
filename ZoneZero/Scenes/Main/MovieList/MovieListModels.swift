@@ -9,6 +9,7 @@ import UIKit
 
 enum MovieList {
     enum Movie {
+        struct Request { }
         struct ViewModel {
             let image: UIImage
             let title: String

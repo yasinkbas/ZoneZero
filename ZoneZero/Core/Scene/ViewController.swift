@@ -14,28 +14,23 @@ class ZoneZeroViewController<View: ZoneZeroView, Router: ZoneZeroRouter>: UIView
     
     // MARK: - Initialize
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        configureAppearance()
-        setupListeners()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        configureAppearance()
-        setupListeners()
-    }
-    
-    convenience init(view: View) {
-        self.init(nibName: nil, bundle: nil)
+    init(view: View) {
+        super.init(nibName: nil, bundle: nil)
         self.view = view
-        configureAppearance()
-        setupListeners()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
     func configureAppearance() { }
     func setupListeners() { }
+    
+    func setup() {
+        configureAppearance()
+        setupListeners()
+    }
     
     // MARK: - Overrides
     

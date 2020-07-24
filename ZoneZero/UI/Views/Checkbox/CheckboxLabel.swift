@@ -36,6 +36,10 @@ class CheckboxLabel: ZoneZeroCheckbox {
     override func customizeAppearance() {
         super.customizeAppearance()
         addSubview(label)
-        label.set(.leftOf(self, super._width + 5), .topOf(self), .rightOf(self))
+        label.set(
+            .topOf(self),
+            .rightOf(self),
+            .leftOf(self, super._width + 5)
+        )
     }
 }

@@ -8,12 +8,12 @@
 import UIKit
 
 protocol RegisterPresentationLogic {
-    func presentRegisterAccess(response: Response)
+    func presentRegisterAccess(response: Response, viewRequest: MovieListViewRequest)
 }
 
 class RegisterPresenter: ZoneZeroPresenter<RegisterView, RegisterRouter, RegisterViewController>, RegisterPresentationLogic {
     
-    func presentRegisterAccess(response: Response) {
-        viewController?.processResponseIfValidated(response: response)
+    func presentRegisterAccess(response: Response, viewRequest: MovieListViewRequest) {
+        viewController?.processResponseIfValidated(response: response, viewRequest: viewRequest)
     }
 }

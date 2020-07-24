@@ -16,7 +16,7 @@ final class AppRouter {
     }
     
     func initializeViewController() {
-        window?.rootViewController = RegisterBuilder().setup()
+        window?.rootViewController = RegisterBuilder().setup(with: .init())
         window?.makeKeyAndVisible()
     }
 }

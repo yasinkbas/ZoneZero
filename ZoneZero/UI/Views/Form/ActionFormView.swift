@@ -66,6 +66,5 @@ class ActionFormView: FormView {
     @objc
     private func didTapActionButton(_ sender: ZoneZeroButton) {
         delegate?.actionFormViewDelegate(self, didTapActionButton: sender)
-    }
-    
+    }    
 }

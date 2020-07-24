@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RegisterDisplayLogic: class {
-    func processResponseIfValidated(response: Response)
+    func processResponseIfValidated(response: Response, viewRequest: MovieListViewRequest)
 }
 
 class RegisterViewController: ZoneZeroViewController<RegisterView, RegisterRouter>, RegisterDisplayLogic {
@@ -20,11 +20,16 @@ class RegisterViewController: ZoneZeroViewController<RegisterView, RegisterRoute
         v?.delegate = self
     }
     
-    func processResponseIfValidated(response: Response) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        v?.resetForm()
+    }
+    
+    func processResponseIfValidated(response: Response, viewRequest: MovieListViewRequest) {
         if let response = response as? ErrorResponse {
             showAlert(title: response.title, message: response.content, actions: [.ok(nil)])
         } else if let _ = response as? SuccessResponse {
-            router?.routeMovieList()
+            router?.navigateMovieList(with: viewRequest)
         }
     }
 }
@@ -35,7 +40,7 @@ extension RegisterViewController: RegisterViewDelegate {
     }
     
     func registerView(_ registerView: RegisterView, didTapAlternateButton alternateButton: ZoneZeroButton, viewModel: Register.FormModel.ViewModel) {
-        router?.routeLogin()
+        router?.navigateLogin()
     }
 }
 

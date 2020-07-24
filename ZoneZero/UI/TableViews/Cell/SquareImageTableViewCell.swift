@@ -88,17 +88,36 @@ class SquareImageTableViewCell: ZoneZeroTableViewCell {
         super.configureAppearance()
         
         addSubview(backgroundImageView)
-        backgroundImageView.set(.leftOf(self), .topOf(self), .rightOf(self), .bottomOf(self, bottomPadding))
+        backgroundImageView.set(
+            .leftOf(self),
+            .topOf(self),
+            .rightOf(self),
+            .bottomOf(self, bottomPadding)
+        )
         
         if cellType.hasContainerView {
             addSubview(descriptionContainerView)
-            descriptionContainerView.set(.leadingOf(self), .trailingOf(self), .heightMultiple(self.height, 0.35), .bottomOf(backgroundImageView))
+            descriptionContainerView.set(
+                .leadingOf(self),
+                .trailingOf(self),
+                .heightMultiple(self.height, 0.35),
+                .bottomOf(backgroundImageView)
+            )
             
             descriptionContainerView.addSubview(titleLabel)
-            titleLabel.set(.leadingOf(descriptionContainerView, 8), .trailingOf(descriptionContainerView, 8), .topOf(descriptionContainerView, 8))
+            titleLabel.set(
+                .leadingOf(descriptionContainerView, 8),
+                .trailingOf(descriptionContainerView, 8),
+                .topOf(descriptionContainerView, 8)
+            )
             
             descriptionContainerView.addSubview(contentLabel)
-            contentLabel.set(.leadingOf(titleLabel), .trailingOf(titleLabel), .top(titleLabel.bottom, 8), .bottomOf(descriptionContainerView, 8))
+            contentLabel.set(
+                .leadingOf(titleLabel),
+                .trailingOf(titleLabel),
+                .top(titleLabel.bottom, 8),
+                .bottomOf(descriptionContainerView, 8)
+            )
         }
     }
 

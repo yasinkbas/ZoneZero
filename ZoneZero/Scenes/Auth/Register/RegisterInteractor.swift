@@ -29,6 +29,6 @@ class RegisterInteractor:
     
     func register(viewModel: Register.FormModel.ViewModel) {
         let response = authenticationWorker.authenticate(viewModel: viewModel)
-        presenter?.presentRegisterAccess(response: response)
+        presenter?.presentRegisterAccess(response: response, viewRequest: .init(username: viewModel.username ?? .none))
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class LoginBuilder: ZoneZeroBuilder {    
     
-    func setup() -> LoginViewController {
+    func setup(with request: EmptyViewRequest) -> LoginViewController {
         let view            = LoginView()
         let viewController  = LoginViewController(view: view)
         let interactor      = LoginInteractor()
@@ -20,7 +20,7 @@ class LoginBuilder: ZoneZeroBuilder {
         interactor.presenter        = presenter
         presenter.viewController    = viewController
         router.viewController       = viewController
-        router.dataStore            = interactor
+        viewController.setup()
         
         return viewController
     }

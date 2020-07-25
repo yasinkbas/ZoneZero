@@ -1,6 +1,6 @@
 # ZoneZero Case 
 Some specifications for this case
-- **Architecture**: Tried to write on Vip `Clean Swift` architecture
+- **Architecture**: Tried to write in Vip `Clean Swift` architecture
 - **Design-code**: Did not used interface builder, it means there is no xib/storyboard
 - **No third-party modules**: `UILab` is written by me it is a group of extensions to write constraints more easily it is amateurish but working :) and `Then` is very simple extension. <br> see also for more detail
 **Then**: https://github.com/devxoul/Then
@@ -11,9 +11,11 @@ Some specifications for this case
 
 
 ### Screenshots
-<img src="src/screenshots/img1.png" width="400">
-<img src="src/screenshots/img2.png" width="400">
-<img src="src/screenshots/img3.png" width="400">
+
+
+| Register   | Login | MovieList |
+|------|--------|------|
+| <img src="src/screenshots/img1.png" width="200"> |  <img src="src/screenshots/img2.png" width="200">   | <img src="src/screenshots/img3.png" width="200"> |
 
 
 

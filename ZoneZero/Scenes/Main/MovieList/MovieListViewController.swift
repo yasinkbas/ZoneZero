@@ -72,4 +72,8 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
         )
         .with(viewModel: movieViewModel)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        alert(title: "Your movie", message: displayedMovies[indexPath.row].description, actions: [.ok(nil)])
+    }
 }

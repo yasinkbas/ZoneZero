@@ -12,10 +12,8 @@ Some specifications for this case
 
 ### Screenshots
 
-
 | Register   | Login | MovieList |
 |------|--------|------|
 | <img src="src/screenshots/img1.png" width="200"> |  <img src="src/screenshots/img2.png" width="200">   | <img src="src/screenshots/img3.png" width="200"> |
-
 
 

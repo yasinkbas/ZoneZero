@@ -15,6 +15,11 @@ class RegisterViewController: ZoneZeroViewController<RegisterView, RegisterRoute
     
     var interactor: RegisterBusinessLogic?
     
+    override var isHideKeyboardWhenTapped: Bool {
+        get { true }
+        set { }
+    }
+    
     override func setupListeners() {
         super.setupListeners()
         v?.delegate = self

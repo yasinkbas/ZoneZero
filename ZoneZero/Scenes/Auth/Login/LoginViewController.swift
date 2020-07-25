@@ -15,6 +15,11 @@ class LoginViewController : ZoneZeroViewController<LoginView, LoginRouter>, Logi
     
     var interactor: LoginInteractor?
     
+    override var isHideKeyboardWhenTapped: Bool {
+        get { true }
+        set { }
+    }
+    
     override func setupListeners() {
         super.setupListeners()
         v?.delegate = self

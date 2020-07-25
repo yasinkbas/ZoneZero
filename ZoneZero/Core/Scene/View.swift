@@ -25,7 +25,6 @@ class ZoneZeroView: UIView, ViewAppearanceModifier {
         configureAppearance()
         setupLayout()
         setupListeners()
-        hideKeyboardWhenTapped()
     }
 
     required init?(coder: NSCoder) {
@@ -35,15 +34,4 @@ class ZoneZeroView: UIView, ViewAppearanceModifier {
     func setupLayout()          { }
     func setupListeners()       { }
     func configureAppearance()  { }
-
-    // MARK:- Hiding Keyboard
-    private func hideKeyboardWhenTapped() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedOnView))
-        addGestureRecognizer(tap)
-    }
-
-    @objc
-    func tappedOnView() {
-        endEditing(true)
-    }
 }

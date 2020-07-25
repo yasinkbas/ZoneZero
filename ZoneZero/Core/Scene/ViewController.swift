@@ -45,6 +45,26 @@ class ZoneZeroViewController<
         viewControllerToPresent.modalPresentationStyle = .fullScreen
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
+    
+    // MARK:- Hiding Keyboard
+    
+    var isHideKeyboardWhenTapped: Bool = false {
+        didSet {
+            isHideKeyboardWhenTapped ? hideKeyboardWhenTapped() : nil
+        }
+    }
+    
+    private func hideKeyboardWhenTapped() {
+        if isHideKeyboardWhenTapped {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(tappedOnView))
+            v?.addGestureRecognizer(tap)
+        }
+    }
+
+    @objc
+    func tappedOnView() {
+        v?.endEditing(true)
+    }
 }
 
 // MARK: - Alert

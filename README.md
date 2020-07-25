@@ -11,8 +11,9 @@ Some specifications for this case
 
 
 ### Screenshots
+<img src="src/screenshots/img1.png" width="400">
+<img src="src/screenshots/img2.png" width="400">
+<img src="src/screenshots/img3.png" width="400">
 
-![sc1](src/screenshots/img1.png)
-![sc2](src/screenshots/img2.png)
-![sc3](src/screenshots/img3.png)
+
 

@@ -27,7 +27,7 @@ class LoginViewController : ZoneZeroViewController<LoginView, LoginRouter>, Logi
     
     func processResponseIfValidated(response: Response, viewRequest: MovieListViewRequest) {
         if let response = response as? ErrorResponse {
-            showAlert(title: response.title, message: response.content, actions: [.ok(nil)])
+            alert(title: response.title, message: response.content, actions: [.ok(nil)])
         } else if let _ = response as? SuccessResponse {
             router?.navigateMovieList(with: viewRequest)
         }

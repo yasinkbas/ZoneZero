@@ -35,6 +35,10 @@ class FormTextFieldItem: UITextField, FormItem {
         let customizedImage = image.withRenderingMode(.automatic)
         customizedImage.withTintColor(.darkGray)
         leftView = UIImageView(image: customizedImage)
+        
+        if isSecureTextEntry {
+            textContentType = .oneTimeCode
+        }
     }
     
     func reset() {

@@ -20,5 +20,6 @@ class ZoneZeroTableViewCell: UITableViewCell, ViewAppearanceModifier {
     
     func configureAppearance() {
         backgroundColor = .clear
+        selectionStyle = .none
     }
 }

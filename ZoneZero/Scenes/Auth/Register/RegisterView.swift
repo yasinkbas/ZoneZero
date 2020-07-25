@@ -65,10 +65,10 @@ extension RegisterView {
             super.init(
                 actionType: .go,
                 items: [
-                    FormTextFieldItem(id: "name", image: UIImage(named: "name")!, placeholder: "Name", isSecured: false),
-                    FormTextFieldItem(id: "username", image: UIImage(named: "user")!, placeholder: "Username", isSecured: false),
-                    FormTextFieldItem(id: "password", image: UIImage(named: "password")!, placeholder: "Password", isSecured: true),
-                    FormTextFieldItem(id: "re-password", image: UIImage(named: "password")!, placeholder: "ReType Password", isSecured: true)
+                    FormTextFieldItem(id: "name", image: Icons.name!, placeholder: "Name", isSecured: false),
+                    FormTextFieldItem(id: "username", image: Icons.username!, placeholder: "Username", isSecured: false),
+                    FormTextFieldItem(id: "password", image: Icons.password!, placeholder: "Password", isSecured: true),
+                    FormTextFieldItem(id: "re-password", image: Icons.password!, placeholder: "ReType Password", isSecured: true)
                 ],
                 title: ZoneZeroLabel(
                     text: "Register",

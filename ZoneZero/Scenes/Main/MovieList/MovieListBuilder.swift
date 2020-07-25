@@ -13,8 +13,8 @@ struct MovieListViewRequest: ZoneZeroViewRequest {
 
 class MovieListBuilder: ZoneZeroBuilder {
     func setup(with request: MovieListViewRequest) -> UINavigationController {
-        let view            = MovieListView()
-        let viewController  = MovieListViewController(view: view, username: request.username)
+        let view            = MovieListView(viewRequest: request)
+        let viewController  = MovieListViewController(view: view)
         let interactor      = MovieListInteractor()
         let presenter       = MovieListPresenter()
         let router          = MovieListRouter()

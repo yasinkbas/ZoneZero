@@ -22,6 +22,10 @@
 		C21F0B2924C8B95E0070C31E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2824C8B95E0070C31E /* Response.swift */; };
 		C21F0B2C24C8D67E0070C31E /* LoginAuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2B24C8D67E0070C31E /* LoginAuthenticationWorker.swift */; };
 		C21F0B2F24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21F0B2E24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift */; };
+		C237687F24CBB6A300DD4ED0 /* TableViewCellViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237687E24CBB6A300DD4ED0 /* TableViewCellViewModels.swift */; };
+		C237688224CBB72700DD4ED0 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237688124CBB72700DD4ED0 /* MovieTableViewCell.swift */; };
+		C237688A24CBD39E00DD4ED0 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237688924CBD39E00DD4ED0 /* Transition.swift */; };
+		C237688D24CBD65500DD4ED0 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = C237688C24CBD65500DD4ED0 /* Images.swift */; };
 		C25335C424C9C8960086DB9F /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335BC24C9C8960086DB9F /* MovieListPresenter.swift */; };
 		C25335C624C9C8960086DB9F /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335BE24C9C8960086DB9F /* MovieListRouter.swift */; };
 		C25335C724C9C8960086DB9F /* MovieListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25335BF24C9C8960086DB9F /* MovieListModels.swift */; };
@@ -129,6 +133,10 @@
 		C21F0B2824C8B95E0070C31E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C21F0B2B24C8D67E0070C31E /* LoginAuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthenticationWorker.swift; sourceTree = "<group>"; };
 		C21F0B2E24C8DA1F0070C31E /* RegisterAuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthenticationWorker.swift; sourceTree = "<group>"; };
+		C237687E24CBB6A300DD4ED0 /* TableViewCellViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellViewModels.swift; sourceTree = "<group>"; };
+		C237688124CBB72700DD4ED0 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		C237688924CBD39E00DD4ED0 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		C237688C24CBD65500DD4ED0 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		C25335BC24C9C8960086DB9F /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		C25335BE24C9C8960086DB9F /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
 		C25335BF24C9C8960086DB9F /* MovieListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListModels.swift; sourceTree = "<group>"; };
@@ -266,6 +274,30 @@
 			path = Workers;
 			sourceTree = "<group>";
 		};
+		C237688024CBB71400DD4ED0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C237688124CBB72700DD4ED0 /* MovieTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C237688824CBD39400DD4ED0 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				C237688924CBD39E00DD4ED0 /* Transition.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		C237688B24CBD64C00DD4ED0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C237688C24CBD65500DD4ED0 /* Images.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		C25335CC24C9C8EB0086DB9F /* Workers */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +335,7 @@
 		C25335D424C9CDF00086DB9F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				C237687E24CBB6A300DD4ED0 /* TableViewCellViewModels.swift */,
 				C25335D524C9CE0F0086DB9F /* SquareImageTableViewCell.swift */,
 			);
 			path = Cell;
@@ -311,8 +344,8 @@
 		C25E57EE24CB1F4700ECC79C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C25E57EF24CB1F5300ECC79C /* Routable.swift */,
 				C25E57F124CB1F6A00ECC79C /* Buildable.swift */,
+				C25E57EF24CB1F5300ECC79C /* Routable.swift */,
 				C2D0D91824CB77950031F319 /* ViewRequest.swift */,
 			);
 			path = Protocols;
@@ -350,17 +383,6 @@
 			path = Mixins;
 			sourceTree = "<group>";
 		};
-		C2ABAB1F24CA3CA900C64DEC /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C2C8374C24C7310E001665FA /* AppDelegate.swift */,
-				C2C8374E24C7310E001665FA /* SceneDelegate.swift */,
-				C21F0B1C24C88D490070C31E /* AppContainer.swift */,
-				C21F0B1E24C88D690070C31E /* AppRouter.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		C2C8374024C7310E001665FA = {
 			isa = PBXGroup;
 			children = (
@@ -386,8 +408,8 @@
 			children = (
 				C2C8378124C73154001665FA /* Core */,
 				C2C8378024C7314F001665FA /* Scenes */,
-				C2C8377F24C7314B001665FA /* Classes */,
 				C2C8377E24C7313B001665FA /* UI */,
+				C2C8377F24C7314B001665FA /* Classes */,
 				C2C8378A24C73322001665FA /* Extensions */,
 				C2C8377C24C7311A001665FA /* App */,
 				C2C8377D24C7312C001665FA /* Supporting files */,
@@ -416,8 +438,12 @@
 		C2C8377C24C7311A001665FA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C2ABAB1F24CA3CA900C64DEC /* Core */,
+				C237688B24CBD64C00DD4ED0 /* Enums */,
 				C2C837C424C73F1F001665FA /* Modules */,
+				C2C8374C24C7310E001665FA /* AppDelegate.swift */,
+				C2C8374E24C7310E001665FA /* SceneDelegate.swift */,
+				C21F0B1C24C88D490070C31E /* AppContainer.swift */,
+				C21F0B1E24C88D690070C31E /* AppRouter.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -447,6 +473,7 @@
 		C2C8377F24C7314B001665FA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C237688824CBD39400DD4ED0 /* Transition */,
 				C2D0D91B24CB78550031F319 /* Request */,
 				C21F0B2724C8B9560070C31E /* Response */,
 			);
@@ -736,6 +763,7 @@
 		C2D8583324C936CD002E50F5 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				C237688024CBB71400DD4ED0 /* Views */,
 				C2D0D90E24CB61660031F319 /* Services */,
 				C25335CC24C9C8EB0086DB9F /* Workers */,
 				C25335C124C9C8960086DB9F /* MovieListBuilder.swift */,
@@ -892,6 +920,7 @@
 				C21F0B1F24C88D690070C31E /* AppRouter.swift in Sources */,
 				C2C837EB24C742CB001665FA /* Label.swift in Sources */,
 				C2D0D91424CB69FF0031F319 /* MovieListDataProvidingWorker.swift in Sources */,
+				C237687F24CBB6A300DD4ED0 /* TableViewCellViewModels.swift in Sources */,
 				C25335C624C9C8960086DB9F /* MovieListRouter.swift in Sources */,
 				C21F0B2224C88FCB0070C31E /* AuthView.swift in Sources */,
 				C2C8379324C7346C001665FA /* Router.swift in Sources */,
@@ -910,8 +939,10 @@
 				C2C837E724C73F83001665FA /* ConstraintVerboseName.swift in Sources */,
 				C2C837DC24C73F83001665FA /* LoggerTypes.swift in Sources */,
 				C2C837BD24C7367A001665FA /* LoginInteractor.swift in Sources */,
+				C237688224CBB72700DD4ED0 /* MovieTableViewCell.swift in Sources */,
 				C21F0B2624C89EE00070C31E /* OvalButton.swift in Sources */,
 				C2C8379924C73483001665FA /* ViewController.swift in Sources */,
+				C237688D24CBD65500DD4ED0 /* Images.swift in Sources */,
 				C25335C924C9C8960086DB9F /* MovieListBuilder.swift in Sources */,
 				C25335C824C9C8960086DB9F /* MovieListViewController.swift in Sources */,
 				C2C8378F24C73459001665FA /* Presenter.swift in Sources */,
@@ -932,6 +963,7 @@
 				C21F0B1824C889B50070C31E /* RegisterViewController.swift in Sources */,
 				C25335D624C9CE0F0086DB9F /* SquareImageTableViewCell.swift in Sources */,
 				C2C837EE24C7431A001665FA /* String.swift in Sources */,
+				C237688A24CBD39E00DD4ED0 /* Transition.swift in Sources */,
 				C2C837F324C74652001665FA /* FormTextFieldItem.swift in Sources */,
 				C2D0D91D24CB78620031F319 /* EmptyViewRequest.swift in Sources */,
 				C21F0B1A24C889B50070C31E /* RegisterInteractor.swift in Sources */,

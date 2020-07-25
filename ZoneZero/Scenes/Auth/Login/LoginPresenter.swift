@@ -11,7 +11,12 @@ protocol LoginPresentationLogic {
     func presentLoginAccess(response: Response, viewRequest: MovieListViewRequest)
 }
 
-class LoginPresenter: ZoneZeroPresenter<LoginView, LoginRouter, LoginViewController>, LoginPresentationLogic {
+class LoginPresenter:
+    ZoneZeroPresenter<
+        LoginView,
+        LoginRouter,
+        LoginViewController
+    >, LoginPresentationLogic {
     
     func presentLoginAccess(response: Response, viewRequest: MovieListViewRequest) {
         viewController?.processResponseIfValidated(response: response, viewRequest: viewRequest)

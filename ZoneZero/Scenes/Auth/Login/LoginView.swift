@@ -104,8 +104,8 @@ extension LoginView {
             super.init(
                 actionType: .default,
                 items: [
-                    FormTextFieldItem(id: "username", image: UIImage(named: "user")!, placeholder: "Username", isSecured: false),
-                    FormTextFieldItem(id: "password", image: UIImage(named: "password")!, placeholder: "Password", isSecured: true)
+                    FormTextFieldItem(id: "username", image: Icons.username!, placeholder: "Username", isSecured: false),
+                    FormTextFieldItem(id: "password", image: Icons.password!, placeholder: "Password", isSecured: true)
                 ],
                 title: ZoneZeroLabel(
                     text: "Login",

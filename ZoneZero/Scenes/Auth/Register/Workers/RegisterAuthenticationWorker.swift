@@ -12,19 +12,22 @@ protocol RegisterAuthenticationWorkerLogic {
 }
 
 class RegisterAuthenticationWorker: RegisterAuthenticationWorkerLogic {
+    
     func authenticate(viewModel: Register.FormModel.ViewModel) -> Response {
         if let name = viewModel.name,
            let username = viewModel.username,
            let password = viewModel.password,
            let repassword = viewModel.repassword,
            name.count > 3,
-           username.count > 3,
-           password.count > 3,
+           username.count > 3 && username.count < 15,
+           password.count > 3 && password.count < 15,
            password == repassword {
             return SuccessResponse()
         }
-        print(viewModel)
         
-        return ErrorResponse(title: "Incorrect entry", content: "Please check these fields again.")
+        return ErrorResponse(
+            title: "Incorrect entry",
+            content: "Please check these fields again. fields character counts must be between 3 and 15 characters"
+        )
     }
 }

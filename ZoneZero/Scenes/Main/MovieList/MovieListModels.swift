@@ -13,7 +13,10 @@ enum MovieList {
         struct ViewModel {
             let image: UIImage
             let title: String
-            let content: String
+            let imdb: Float
+            let director: String
+            let writers: String
+            let stars: String
         }
     }
 }
@@ -25,7 +28,7 @@ extension ZoneZeroTableViewDataSource where Model == MovieList.Movie.ViewModel {
             reuseIdentifier: reuseIdentifier
         ) { movie, cell in
             cell.textLabel?.text = movie.title
-            cell.detailTextLabel?.text = movie.content
+//            cell.detailTextLabel?.text = movie.content
         }
     }
 }

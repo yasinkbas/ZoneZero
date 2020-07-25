@@ -7,6 +7,4 @@
 
 import Foundation
 
-protocol ZoneZeroViewRequest {
-    
-}
+protocol ZoneZeroViewRequest { }

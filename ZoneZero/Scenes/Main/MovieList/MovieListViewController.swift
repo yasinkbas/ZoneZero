@@ -13,10 +13,7 @@ protocol MovieListDisplayLogic: class {
 
 class MovieListViewController : ZoneZeroViewController<MovieListView, MovieListRouter>, MovieListDisplayLogic {
     
-    var username: String
     var interactor: MovieListInteractor!
-    
-    let cellIdentifier: String = "movieListCell"
     
     var displayedMovies: [MovieList.Movie.ViewModel] = [] {
         didSet {
@@ -25,15 +22,6 @@ class MovieListViewController : ZoneZeroViewController<MovieListView, MovieListR
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
-    
-    init(view: MovieListView, username: String) {
-        self.username = username
-        super.init(view: view)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func setup() {
         super.setup()
@@ -44,28 +32,26 @@ class MovieListViewController : ZoneZeroViewController<MovieListView, MovieListR
         super.setupListeners()
         v?.tableView.delegate   = self
         v?.tableView.dataSource = self
-        v?.goLogoutButton.addTarget(self, action: #selector(didTapGoLogoutButton), for: .touchUpInside)
+        v?.logoutButton.addTarget(self, action: #selector(didTapLogoutButton), for: .touchUpInside)
     }
     
     override func configureAppearance() {
         super.configureAppearance()
         title = "Movies"
-        v?.configure(username: username)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.4037427497, green: 0.1702677981, blue: 0.2085620941, alpha: 1)
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     func displayFetchedMovies(viewModels: [MovieList.Movie.ViewModel]) {
         displayedMovies = viewModels
-        print(viewModels)
     }
     
     @objc
-    func didTapGoLogoutButton(_ sender: UIButton) {
+    func didTapLogoutButton(_ sender: UIButton) {
         router?.navigateBackLogin()
     }
 }
@@ -79,22 +65,11 @@ extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let movieViewModel = displayedMovies[indexPath.row]
         
-        let cell = SquareImageTableViewCell(
+        return MovieTableViewCell(
             style: .default,
-            reuseIdentifier: cellIdentifier,
-            cellType: .annotated(
-                title: movieViewModel.title,
-                content: movieViewModel.content
-            ),
-            bottomPadding: 20
+            reuseIdentifier: MovieTableViewCell.identifier,
+            bottomPadding: 5
         )
-        
-        cell.configure(image: movieViewModel.image)
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        .with(viewModel: movieViewModel)
     }
 }

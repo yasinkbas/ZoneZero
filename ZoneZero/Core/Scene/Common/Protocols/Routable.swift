@@ -7,10 +7,4 @@
 
 import UIKit
 
-protocol ZoneZeroRoutable {
-    
-}
-
-protocol ZoneZeroViewControllerRouter {
-    func route() -> UIViewController?
-}
+protocol ZoneZeroRoutable { }

@@ -12,7 +12,12 @@ final class AppContainer {
     
     init(window: UIWindow?) {
         router = AppRouter(window: window)
+        configureNavigationController()
         configureUILab()
+    }
+    
+    func configureNavigationController() {
+        UINavigationBar.appearance().isTranslucent = false
     }
     
     func configureUILab() {

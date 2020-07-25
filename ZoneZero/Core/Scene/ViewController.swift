@@ -7,7 +7,10 @@
 
 import UIKit
 
-class ZoneZeroViewController<View: ZoneZeroView, Router: ZoneZeroRouter>: UIViewController {
+class ZoneZeroViewController<
+    View: ZoneZeroView,
+    Router: ZoneZeroRouter
+>: UIViewController {
     var v: View? { view as? View }
     
     var router: Router?
@@ -46,33 +49,33 @@ class ZoneZeroViewController<View: ZoneZeroView, Router: ZoneZeroRouter>: UIView
 
 // MARK: - Alert
 extension ZoneZeroViewController {
-        enum AlertActionType {
-            typealias Handler = ((UIAlertAction) -> ())
-            case ok(Handler? = nil)
-            case cancel(Handler? = nil)
-            
-            var handler: Handler? {
-                value.handler
-            }
-            
-            var title: String {
-                value.title
-            }
-            
-            var actionStyle: UIAlertAction.Style {
-                value.style
-            }
-            
-            private var value: (title: String, handler: Handler?, style: UIAlertAction.Style) {
-                switch self {
-                    case let .ok(handler): return ("Ok", handler, .default)
-                    case let .cancel(handler): return ("Cancel", handler, .cancel)
-                }
+    enum AlertActionType {
+        typealias Handler = ((UIAlertAction) -> ())
+        case ok(Handler? = nil)
+        case cancel(Handler? = nil)
+        
+        var handler: Handler? {
+            value.handler
+        }
+        
+        var title: String {
+            value.title
+        }
+        
+        var actionStyle: UIAlertAction.Style {
+            value.style
+        }
+        
+        private var value: (title: String, handler: Handler?, style: UIAlertAction.Style) {
+            switch self {
+            case let .ok(handler): return ("Ok", handler, .default)
+            case let .cancel(handler): return ("Cancel", handler, .cancel)
             }
         }
+    }
     
     
-    func showAlert(title: String, message: String, actions: [AlertActionType]) {
+    func alert(title: String, message: String, actions: [AlertActionType]) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         actions.forEach {
             alertController.addAction(UIAlertAction(title: $0.title, style: $0.actionStyle, handler: $0.handler))

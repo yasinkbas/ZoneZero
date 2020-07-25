@@ -9,56 +9,86 @@ import Foundation
 
 class MoviesDataStore {
     static var movies: [MovieList.Movie.ViewModel]  =
-    [
-        .init(
-            image: #imageLiteral(resourceName: "12-angry-men"),
-            title: "12 angry men",
-            content: "A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "fight-club"),
-            title: "Fight Club",
-            content: "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "goodfellas"),
-            title: "Goodfellas",
-            content: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "inception"),
-            title: "Inception",
-            content: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "interstellar"),
-            title: "Interstellar",
-            content: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "matrix"),
-            title: "Matrix",
-            content: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "the-dark-knight"),
-            title: "The Dark Knight",
-            content: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "the-lord-of-the-rings"),
-            title: "The Lord Of The Rings",
-            content: "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "the-pianist"),
-            title: "The Pianist",
-            content: "A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II."
-        ),
-        .init(
-            image: #imageLiteral(resourceName: "the-prestige"),
-            title: "The Prestige",
-            content: "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other."
-        ),
-    ].shuffled()
+        [
+            .init(
+                image: #imageLiteral(resourceName: "12-angry-men"),
+                title: "12 angry men",
+                imdb: 8.9,
+                director: "Sidney Lumet",
+                writers: "Reginald Rose",
+                stars: "Henry Fonda, Lee J. Cobb, Martin Balsam"
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "fight-club"),
+                title: "Fight Club",
+                imdb: 8.8,
+                director: "David Fincher",
+                writers: "Chuck Palahniuk (novel), Jim Uhls (screenplay)",
+                stars: "Brad Pitt, Edward Norton, Meat Loaf "
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "goodfellas"),
+                title: "Goodfellas",
+                imdb: 8.7,
+                director: "Martin Scorsese",
+                writers: "Nicholas Pileggi (book), Nicholas Pileggi (screenplay)",
+                stars: "Robert De Niro, Ray Liotta, Joe Pesci"
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "inception"),
+                title: "Inception",
+                imdb: 8.8,
+                director: "Christopher Nolan",
+                writers: "Christopher Nolan",
+                stars: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page"
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "interstellar"),
+                title: "Interstellar",
+                imdb: 8.6,
+                director: "Christopher Nolan",
+                writers: "Jonathan Nolan, Christopher Nolan",
+                stars: "Matthew McConaughey, Anne Hathaway, Jessica Chastain"
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "matrix"),
+                title: "The Matrix",
+                imdb: 8.7,
+                director: "Lana Wachowski (as The Wachowski Brothers), Lilly Wachowski (as The Wachowski Brothers)",
+                writers: "Lilly Wachowski (as The Wachowski Brothers), Lana Wachowski (as The Wachowski Brothers)",
+                stars: "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss"
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "the-dark-knight"),
+                title: "The Dark Knight",
+                imdb: 9.0,
+                director: "Christopher Nolan",
+                writers: "Jonathan Nolan (screenplay), Christopher Nolan (screenplay)",
+                stars: "Christian Bale, Heath Ledger, Aaron Eckhart "
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "the-lord-of-the-rings"),
+                title: "The Lord Of The Rings",
+                imdb: 8.9,
+                director: "Peter Jackson",
+                writers: "J.R.R. Tolkien (novel), Fran Walsh (screenplay)",
+                stars: "Elijah Wood, Viggo Mortensen, Ian McKellen "
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "the-pianist"),
+                title: "The Pianist",
+                imdb: 8.5,
+                director: "Roman Polanski",
+                writers: "Ronald Harwood (screenplay), Wladyslaw Szpilman (book)",
+                stars: "Adrien Brody, Thomas Kretschmann, Frank Finlay"
+            ),
+            .init(
+                image: #imageLiteral(resourceName: "the-prestige"),
+                title: "The Prestige",
+                imdb: 8.5,
+                director: "Christopher Nolan",
+                writers: "Jonathan Nolan (screenplay), Christopher Nolan (screenplay)",
+                stars: "Christian Bale, Hugh Jackman, Scarlett Johansson"
+            )
+        ].shuffled()
 }
